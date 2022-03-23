@@ -6,7 +6,8 @@ number_categories: 3 # set to zero to exclude
 use_featured: false
 show_intro: true
 intro: |
- I did my undergraduate in Veterinary Sciences and Animal Husbandry from College of Veterinary Sciences and Animal Husbandry, Central Agricultural University, Aizawl. I did my master's in Animal Genetics and Breeding from Khon Kaen University, Thailand
+ - Veterinary Sciences and Animal Husbandry from College of Veterinary Sciences and Animal Husbandry, Central Agricultural University, Aizawl. 
+ - Animal Genetics and Breeding from Khon Kaen University, Thailand
   
   
 show_outro: false
