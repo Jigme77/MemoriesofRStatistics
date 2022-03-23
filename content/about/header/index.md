@@ -7,6 +7,6 @@ headline: |
 ---
 
 <!-- this is a subheadline -->
-I'm a Hugo theme you'll want to hang out with. :fr: 
+I am a lecturer at College of Natural Resources, Royal University of Bhutan. I teach Animal Biotechnology, Genetics, and Statistics for undergraduate students.
 
-The page you are reading is based on a markdown file- look in `content/about/` to edit. There, look inside the `header`, `main`, and `sidebar` folders to get started building your own "about" page.
+Recently, I have developed keen interest in learning R programming and its usage. I believe R is best way to make informed decisions using the R statistics.
