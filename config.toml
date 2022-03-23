@@ -28,7 +28,7 @@ enableEmoji = true
     style = "github"
     
 [params]
-  orgName = "College of Natural Resources, Royal University of Bhutan"
+  orgName = "Jigme Tenzin, College of Natural Resources, Royal University of Bhutan"
   orgLocal = "Lobesa, Bhutan"
   description = "A modern, beautiful, and easily configurable blog theme for Hugo."
   favicon = "/img/favicon.ico"
