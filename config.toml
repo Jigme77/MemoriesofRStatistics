@@ -110,17 +110,17 @@ enableEmoji = true
 [menu]
   [[menu.header]]
     name = "About"
-    title = "About Apéro"
+    title = "About Me"
     url = "/about/"
     weight = 1
+ # [[menu.header]]
+ # name = "Get started"
+   #  title = "Get started using the Hugo Apéro theme"
+   #  url = "/get-started/"
+   #  weight = 2
   [[menu.header]]
-    name = "Get started"
-    title = "Get started using the Hugo Apéro theme"
-    url = "/get-started/"
-    weight = 2
-  [[menu.header]]
-    name = "Learn"
-    title = "learn more about using the Hugo Apéro theme"
+    name = "Classes"
+    title = "Classes"
     url = "/learn/"
     weight = 3
   [[menu.header]]
