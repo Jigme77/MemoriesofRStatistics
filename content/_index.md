@@ -3,7 +3,7 @@ title: "Jigme Tenzin"
 subtitle: "Kaizen: Lifelong learning with me"
 description: "Welcome! Here is the journey I take in learning R, Statistics, and Life."
 images:
-  - img/voir.jpg
+  - img/bhutan.jpg
 image_left: false
 text_align_left: true
 show_social_links: true # specify social accounts in site config
