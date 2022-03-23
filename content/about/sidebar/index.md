@@ -7,10 +7,10 @@ show_social_links: true # specify social accounts in site config
 audio_link_label: # leave blank to exclude
 link_list_label: "Interests" # bookmarks, elsewhere, etc.
 link_list:
-- name: R Statistics
-  url: https://en.wikipedia.org/wiki/R_(programming_language)
+- name: Animal Genetics and Breeding
+- name: R Programming
+- name: Statistics
 - name: Learning
-  url: https://www.wikihow.com/Learn
 ---
 
 ** index doesn't contain a body, just front matter above.
