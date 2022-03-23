@@ -121,7 +121,7 @@ enableEmoji = true
   [[menu.header]]
     name = "Classes"
     title = "Classes"
-    url = "/learn/"
+    url = "/classes/"
     weight = 3
   [[menu.header]]
     name = "Projects"
