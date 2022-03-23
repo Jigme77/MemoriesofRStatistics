@@ -11,11 +11,6 @@ link_list:
   url: https://en.wikipedia.org/wiki/R_(programming_language)
 - name: Learning
   url: https://www.wikihow.com/Learn
-  url: https://en.wikipedia.org/wiki/Paris
-- name: Pastries
-  url: https://en.wikipedia.org/wiki/Pastry
-- name: People
-  url: https://en.wikipedia.org/wiki/People
 ---
 
 ** index doesn't contain a body, just front matter above.
