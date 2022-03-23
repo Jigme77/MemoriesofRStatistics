@@ -1,4 +1,4 @@
-baseURL = "https://hugo-apero-docs.netlify.app/"
+baseURL = "https://lighthearted-kringle-b370ab.netlify.app/"
 languageCode = "en"
 theme = "hugo-apero"
 title = "Memories of R Statistics"
