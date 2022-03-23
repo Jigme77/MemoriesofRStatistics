@@ -43,7 +43,7 @@ enableEmoji = true
   # Place image file in `static` folder and specify image name here.
   sharing_image = "/img/papillons.jpg"
   # Twitter username (without @). Used when a visitor shares your site on Twitter.
-  twitter = "apreshill"
+  twitter = "tenz_jigme"
   
   # use a built-in color theme
   # one of: forest / grayscale / peach / plum /
@@ -84,19 +84,19 @@ enableEmoji = true
   [[params.social]]
       icon      = "github" # icon name without the 'fa-'
       icon_pack = "fab"
-      url       = "https://github.com/hugo-apero/"
+      url       = "https://github.com/jigme77/"
   [[params.social]]
       icon      = "twitter" # icon name without the 'fa-'
       icon_pack = "fab"
-      url       = "https://twitter.com/apreshill"
-  [[params.social]]
-      icon      = "discord" # icon name without the 'fa-'
-      icon_pack = "fab"
-      url       = "https://discord.gg/QbGXCFTMNb"
+      url       = "https://twitter.com/tenz_jigme"
+ # [[params.social]]
+  #    icon      = "discord" # icon name without the 'fa-'
+ #     icon_pack = "fab"
+   #   url       = "https://discord.gg/QbGXCFTMNb"
   [[params.social]]
       icon      = "youtube" # icon name without the 'fa-'
       icon_pack = "fab"
-      url       = "https://youtube.com/playlist?list=PLzxicn7kBeay3kTPuTQ9lSi7I5jfWmEwc"
+      url       = "https://www.youtube.com/channel/UCCdK6nPDlKCR6J6jDrgPzUw"
   [[params.social]]
       icon      = "lemon" # icon name without the 'fa-'
       icon_pack = "far"
@@ -138,11 +138,11 @@ enableEmoji = true
    # title = "A collection"
    # url = "/collection/"
    # weight = 5
-  [[menu.header]]
-    name = "Elements"
-    title = "Element Page"
-    url = "/elements/"
-    weight = 6
+ ##[[menu.header]]
+ #   name = "Elements"
+   # title = "Element Page"
+  #  url = "/elements/"
+   # weight = 6
 
   # Configure footer  
   [[menu.footer]]
