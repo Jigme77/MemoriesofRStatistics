@@ -8,9 +8,17 @@ audio_link_label: # leave blank to exclude
 link_list_label: "Interests" # bookmarks, elsewhere, etc.
 link_list:
 - name: R Statistics
+<<<<<<< HEAD
   url: https://en.wikipedia.org/wiki/R_(programming_language)
 - name: Learning
   url: https://www.wikihow.com/Learn
+=======
+  url: https://en.wikipedia.org/wiki/Paris
+- name: Pastries
+  url: https://en.wikipedia.org/wiki/Pastry
+- name: People
+  url: https://en.wikipedia.org/wiki/People
+>>>>>>> 20b089dc5b24de81a3802516d2ee940ff7586639
 ---
 
 ** index doesn't contain a body, just front matter above.
