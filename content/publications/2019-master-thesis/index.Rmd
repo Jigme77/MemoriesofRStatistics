@@ -1,19 +1,18 @@
 ---
-title: "Design and Evaluation of a Postpartum Depression Ontology"
-author: "Rebecca B. Morse, Abigail C. Bretzin, Silvia P. Canelón, Bernadette A. D'Alonzo, Andrea L. C. Schneider, and Mary R. Boland"
-date: '2022-03-09'
-slug: ppd-ontology
+title: "A  study  of  association  between  genetic markers in  candidate  genes  and  production  traits  in  Thai  native chickens "
+author: "Jigme Tenzin"
+date: '2019'
+slug: candidate-genes
 categories:
   - Research
 tags:
-  - EHR
-  - pregnancy
-  - ppd
+  - candidate genes
+  - production traits
 doi: ''
-publishDate: '2022-03-14'
-publication: 'Applied Clinical Informatics'
-summary: 'Study describing an ontology created for the identification of patients with postpartum depression.'
-subtitle: 'Study describing an ontology created for the identification of patients with postpartum depression.'
+publishDate: '2019-06-15'
+publication: 'Khon Kaen University'
+summary: 'Study describing the association of candidate genes and production traits.'
+subtitle: 'Production traits and its association with candidate genes'
 featured: yes
 links:
 - icon: doi
