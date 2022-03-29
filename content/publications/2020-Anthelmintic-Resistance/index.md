@@ -1,27 +1,28 @@
 ---
-title: "Potential genetic markers and their association with production traits in Thai Pradu Hang Dam and Chee native chickens"
-author: "Jigme Tenzin, Wuttigrai Boonkum1, and Vibuntita Chankitisakul1"
+title: "Assessment of Anthelmintic Resistance of Fasciola spp. against Flunil-L® and Fasinash®"
+author: "Sonam Dolma, Jigme Tenzin, and Jambay Dorjee"
 date: '2019-05-12'
-slug: genetic-markters
+slug: anthelmintic-resistance
 categories:
   - Research
 tags:
-  - candidate genes
-  - Oradu Hang Dam
-  - Production Traits
-  - Marker-assisted selection
+  - Fasciolosis
+  - Anthelmintic resistance
+  - Bhutan
+  - triclabendazole
+  - oxyclozanide
   
-doi: './do:10.14456/kaj.2020.19'
-publishDate: '2019-06-12'
-publication: 'Khon Kaen University'
-summary: 'Association of candidate genes with production traits in Thail Chee and Pradu Hang Dam chickens.'
-subtitle: 'Potential genetic markers in Thai native chickens'
+doi: 'https://doi.org/10.17102/cnr.2020.51'
+publishDate: '2020-11-19'
+publication: 'BJNRD'
+summary: 'Anthelmintic resistance to triclabendazole and ozyclozanide.'
+subtitle: 'Oxyclozanide and triclabendazole resistance'
 featured: yes
 links:
 - icon: doi
   icon_pack: ai
   name: Publication
-  url: https://ag2.kku.ac.th/kaj/PDF.cfm?filename=19_12.pdf&id=4166&keeptrack=10
+  url: https://bjnrd.org/index.php/bjnrd/article/view/58
 ---
 
 <style type="text/css">
@@ -39,7 +40,6 @@ links:
 
 ## Abstract 
 
-Native chickens are increasingly selected for better production and performance as they cannot compete with hybrids and exotic breeds in growth and reproductive traits. Traditionally, phenotypic based selection was used to select animal which took longer to improve the animal and their response to selection was minimal. However, nowadays we can select animals at young age using
-genetic markers. But we need more genetic markers for a robust selection. Therefore, in this study, we aimed to find the association among MTNR1C, STAT5B, BMP15, and DRD2 with production traits. A sample size of 188 chickens were used with 95 Chee chickens and 93 Pradu Hang Dam chickens.
-Blood samples were collected from wing vein. The DNA was isolated with modified form of guanidine hydrochloride method. It was genotyped using PCR-RFLP. The GLM procedure was used to compare the least square means between different genotype. Chi-square goodness of fit test was used to test the Hardy-Weinberg equilibrium. All the genes deviated significantly from Hardy-Weinberg equilibrium
-except DRD2. The MTNR1C was significantly associated with age at first egg (AFE) with a allele giving earlier eggs than G allele in Pradu Hang Dam chickens and subsequent higher egg production. However, we didn’t find any association with other genes and productions traits. Moreover, in Chee, we didn’t establish any tentative association with all the genes studied and the production traits. We recommend that MTNR1C can be a potential marker for improving egg production traits. 
+Fasciolosis caused by Fasciola spp. is recognized to be one of the major problems affecting health and productivity of cattle in Bhutan. Various anthelmintic drugs are used to treat and control fascio-liasis in the country among which, triclabendazole and oxyclozanide are the most common ones. These drugs have been used for a very long time in the country and possibility of development of resistance to these drugs is high. Also, limited studies had been carried out to test their efficacies in the country. Therefore, this study was done to determine the prevalence of fasciolosis in cattle in Maedwang gewog under Thimphu Dzongkhag and assess the status of resistance of Fasciola spp. to Fasinash® and Flunil-L® drugs. A total of 218 faecal samples were collected from cattle and subjected to 
+parasitological test using standard sedimentation technique. The animals positive to Fasciola were treated with Fasinash® (triclabendazole bolus) and Flunil-L® (oxyclozanide+levamisole suspension). The faecal eggs were analyzed 14 days after the treatment by Faecal Egg Count Reduction Test and the efficacy was calculated. The overall prevalence of fasciolosis in the study was 32.11% with a 
+prevalence of 28.80% in Namseling and 36.56% in Khasadrapchu. The mean faecal egg count (epg) of Fasciola spp. detected in Namseling was 0.65 ± 1.53 SD and in Khasadrapchu was 1.03 ± 2.07 SD. There was no significant difference in the mean faecal egg counts in the two chiwogs (p > .05 at 95% confidence level). The overall efficacy of Fasinash® was 86.96% and for Flunil-L® was 91.38%. Significant difference was observed between pre-treatment and post-treatment in both the treatment groups (p < .05 at 95% confidence level). However, the study implies development of resistance of Fasciola spp. to triclabendazole in the study area.

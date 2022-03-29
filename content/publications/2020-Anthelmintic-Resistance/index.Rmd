@@ -1,5 +1,5 @@
 ---
-title: "ssessment of Anthelmintic Resistance of Fasciola spp. against Flunil-L® and Fasinash®"
+title: "Assessment of Anthelmintic Resistance of Fasciola spp. against Flunil-L® and Fasinash®"
 author: "Sonam Dolma, Jigme Tenzin, and Jambay Dorjee"
 date: '2019-05-12'
 slug: anthelmintic-resistance
@@ -22,7 +22,7 @@ links:
 - icon: doi
   icon_pack: ai
   name: Publication
-  url:https://bjnrd.org/index.php/bjnrd/article/view/58
+  url: https://bjnrd.org/index.php/bjnrd/article/view/58
 ---
 
 <style type="text/css">
