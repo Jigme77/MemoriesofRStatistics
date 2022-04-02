@@ -1,14 +1,14 @@
 ---
-title: "A campfire"
-subtitle: "Testing"
-excerpt: "Here is a talk I gave on making awesome personal websites using Hugo, blogdown, GitHub, and Netlify."
+title: "Learning how to learn"
+subtitle: "A seminar to students on how to learn"
+excerpt: "Here is the talk I gave to students on learning how to learn"
 date: 2021-01-12
-date_end: "2021-01-13"
+date_end: "2022-12-12"
 show_post_time: false
-event: "rstudio::global(2021)"
-event_url: https://global.rstudio.com
-author: "Alison Hill"
-location: "Sydney, Australia"
+event: "Thursday Seminar"
+event_url: 
+author: "Jigme Tenzin"
+location: "via zoom"
 draft: false
 # layout options: single, single-sidebar
 layout: single
@@ -18,11 +18,13 @@ links:
 - icon: door-open
   icon_pack: fas
   name: website
-  url: https://bakeoff.netlify.com/
+  url: https://
 - icon: github
   icon_pack: fab
   name: code
-  url: https://github.com/apreshill/bakeoff
+  url: https://github.com/jigme-tenzin.netlify.app/talks
 ---
 
-I'm really excited to give this talk! Stay tuned for video and slides.
+I'm really excited to give this talk! I am excited about the talk.
+
+[slides](static/slides/2022-how-to-learn/index.html)
