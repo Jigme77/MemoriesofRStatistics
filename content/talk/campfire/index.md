@@ -18,7 +18,7 @@ links:
 - icon: door-open
   icon_pack: fas
   name: website
-  url: https://
+  url: https://slides/2022-how-to-learn/index.html#1
 - icon: github
   icon_pack: fab
   name: code
