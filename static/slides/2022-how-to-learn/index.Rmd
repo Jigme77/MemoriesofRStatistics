@@ -1,8 +1,8 @@
 ---
-title: "Teaching in Production"
-subtitle: "Make your teaching more robust & reproducible with R Markdown"
-author: Dr. Alison Presmanes Hill
-date: "`r Sys.Date()`"
+title: "Learning How to Learn"
+subtitle: "Time tested method to understand, learn, and remember more"
+author: Dr. Jigme Tenzin
+date: "Updated: `r Sys.Date()`"
 output:
   xaringan::moon_reader:
     css: ["default", "assets/css/my-theme.css", "assets/css/my-fonts.css"]
@@ -53,19 +53,19 @@ class: title-slide, center, bottom
 
 ???
 
-Welcome to the webinar on sharing on short notice
+Welcome to the seminar on learning how to learn
 
-Where we'll show you how to get your teaching materials online with R Markdown.
+Where I will show to effectively learn. .
 
 ---
 layout: true
 
-<a class="footer-link" href="https://rstd.io/tip">rstd.io/tip</a>
+<a class="footer-link" href="https://jigme-tenzin.netlify.app/talks">learn/tips</a>
 
 ---
-name: clouds
+name: cnr
 class: center, middle
-background-image: url(images/clouds.jpg)
+background-image: url(images/cnr-snow-2022.jpeg)
 background-size: cover
 
 ```{css, echo=FALSE}
@@ -80,32 +80,14 @@ background-size: cover
 }
 ```
 
-```{r meta, echo=FALSE}
-library(metathis)
-meta() %>%
-  meta_general(
-    description = "Make your teaching more robust & reproducible with R Markdown",
-    generator = "xaringan and remark.js"
-  ) %>% 
-  meta_name("github-repo" = "rstudio-education/teaching-in-production") %>% 
-  meta_social(
-    title = "Teaching in production",
-    url = "https://rstd.io/tip",
-    image = "https://repository-images.githubusercontent.com/288797104/d13f1700-e2cc-11ea-9ed7-0bf3a41af1e4",
-    image_alt = "R Markdown hedgehog by Allison Horst",
-    og_type = "website",
-    twitter_card_type = "summary_large_image"
-  )
-```
-
 ---
-template: clouds
+template: cnr
 
 ## .big-text[Hello.]
 
 ???
 
-So hello- I'm so happy to be invited to join you all today.
+So hello- I'm so happy to meet you guys and give this talk on learning. 
 
 ---
 name: clouds
@@ -118,54 +100,27 @@ template: clouds
 class: middle, center
 
 
-### Alison Hill 
+### Jigme Tenzin
 
-<img style="border-radius: 50%;" src="https://alison.rbind.io/authors/alison/avatar.jpg" width="150px"/>
+<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/33521501?s=400&u=aeda6d38bfd9c969c69a69490dfe748506231457&v=4" width="150px"/>
 
-[`r icon::fa("github")` @apreshill](https://github.com/apreshill)  
-[`r icon::fa("twitter")` @apreshill](https://twitter.com/apreshill)  
-[`r icon::fa("link")` alison.rbind.io](https://alison.rbind.io)
+[`r icons::fontawesome("github")` @jigme77](https://github.com/apreshill)  
+[`r icons::fontawesome("twitter")` @tenz_jigme](https://twitter.com/apreshill)  
+[`r icons::fontawesome("link")` jigme-tenzin.netlify.app](https://jigme-tenzin.netlify.app)
 
 
 ???
-
-My name is Alison Hill, and I'm a data scientist and professional educator at RStudio.
+My name is Jigme Tenzin. I work as lecturer in the department of animal science. Now, I am a trainee at Rural Development Administration, South Korea.
 
 
 ---
 class: freight-slide, center, middle, inverse
 
-# .shadow-text[I teach a lot.]
-
-
-
----
-class: freight-slide, center, middle, inverse
-
-# .shadow-text[I teach a lot.]
-
-https://ohsu-conj620.netlify.com/
-
-https://apreshill.github.io/data-vis-labs-2018/
-
-https://ohsu-math630.netlify.com/
-
-https://alison.rbind.io/project/tidyml/
-
-https://conf20-intro-ml.netlify.com/
-
-https://summer-of-blogdown.netlify.com/
-
-https://alison.rbind.io/project/rmd4medicine/
-
-all here: https://alison.rbind.io/projects/
-
+# .shadow-text[I love learning.]
 
 ???
-
-All of these are courses or workshops that I have developed and taught. Sometimes, I've taught them more than once. Others, just the one time.
-
-Each site was built using R Markdown, with different tools chosen depending on what we needed.
+I feel it is prerequisite for everyone to love learning. Because what is life we do not give time to learn and relearn things. 
+I try learning new things. I can programme a bit in R. I read nonfiction books. And now, in my free time, I am learning korean.
 
 ---
 template: clouds
@@ -178,7 +133,7 @@ class: middle, center
 
 <div class="flex" style="margin: 0 1em;">
   <div class="column">
-    <h3> You're an educator <h3>
+    <h3> You're a student <h3>
     <img src="images/educator.jpg" style="width: 100%;">
   </div>
   
@@ -187,19 +142,19 @@ class: middle, center
 
 Here's who I know you are...
 
-You're an educator
+You're an student. You want to learn. You want to do good in life. Probably, learning has been not easy for you.
   
 --
 
    <div class="column"style="margin: 0 1em;">
-    <h3> You know R Markdown  </h3>
+    <h3> You have many things to learn and master  </h3>
     <img src="images/rmd-buddy.jpg" style="width: 100%;">
   </div>
   
 
 ???
 
-You have R Markdown files for teaching...
+You have many materials or subjects or modules to read ...
 
 
 ---
@@ -208,12 +163,12 @@ class: middle, center
 
 <div class="flex" style="margin: 0 1em;">
   <div class="column">
-    <h3> You're an educator </h3>
+    <h3> You are a student </h3>
     <img src="images/educator.jpg" style="width: 100%;">
   </div>
   
   <div class="column"style="margin: 0 1em;">
-    <h3> You know R Markdown </h3>
+    <h3> You have many things to learn and master </h3>
     <img src="images/rmd-buddy.jpg" style="">
   </div>
   
@@ -1496,7 +1451,7 @@ All art by [Allison Horst](https://www.allisonhorst.com/) & [Desirée De Leon](h
 
 ### Find me at...
 
-[`r icon::fa("twitter")` @apreshill](http://twitter.com/apreshill)  
-[`r icon::fa("github")` @apreshill](http://github.com/apreshill)  
-[`r icon::fa("link")` alison.rbind.io](https://alison.rbind.io)  
-[`r icon::fa("paper-plane")` alison@rstudio.com](mailto:alison@rstudio.com)
+[`r icons::fontawesome("twitter")` @apreshill](http://twitter.com/apreshill)  
+[`r icons::fontawesome("github")` @apreshill](http://github.com/apreshill)  
+[`r icons::fontawesome("link")` alison.rbind.io](https://alison.rbind.io)  
+[`r icons::fontawesome("paper-plane")` alison@rstudio.com](mailto:alison@rstudio.com)
