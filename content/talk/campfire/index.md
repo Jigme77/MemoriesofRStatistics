@@ -27,4 +27,4 @@ links:
 
 I'm really excited to give this talk! I am excited about the talk.
 
-[slides](slides/2022-how-to-learn/index)
+[slides](slides/2022-how-to-learn/index.html)
