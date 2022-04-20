@@ -25,6 +25,6 @@ links:
   url: https://github.com/Jigme77/MemoriesofRStatistics/tree/main/static/slides/2022-how-to-learn
 ---
 
-I'm really excited to give this talk.
+I'm really excited to give this talk on **learning how to learn**. I am really passionate about learning. This talk is scheduled to be given to undergraduates students in College of Natural Resources, Royal University in Bhutan. Find the slides in the link below. 
 
-[slides](/slides/2022-how-to-learn/index.html#1)
+[**Learning How to Learn**](/slides/2022-how-to-learn/index.html#1)
