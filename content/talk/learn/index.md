@@ -18,7 +18,7 @@ links:
 - icon: door-open
   icon_pack: fas
   name: website
-  url: https://jigme-tenzin.netlify.app/talks
+  url: https://jigme-tenzin.netlify.app/talk
 - icon: github
   icon_pack: fab
   name: code
