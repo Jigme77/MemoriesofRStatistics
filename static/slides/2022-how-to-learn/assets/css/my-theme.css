@@ -88,13 +88,13 @@ a:hover, a:active, a:focus {
 }
 
 .inverse {
-  background-color: #fedb00;
+  background-color: #104b63;
   color: #023d4d;
   text-shadow: none;
 }
 
 .inverse h1, .inverse h2, .inverse h3 {
-	color: #023d4d;
+	color: #ffffff;
 }
 
 .inverse .remark-inline-code {
