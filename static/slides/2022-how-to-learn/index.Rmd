@@ -229,20 +229,15 @@ class: center
 
 ## Step 5 - 100: Falls down ...
 
----
-background-image: url("images/cycle.jpg")
-background-size: contain
-background-color: #f6f6f6
-
-
 --
 > # Learning should be like learning to ride a bicycle. You don't give until you ride them.
 
 ---
 
-# The Joy of Riding a bicycle
-
-[Cycle](im)
+---
+background-image: url("images/cycle.jpg")
+background-size: contain
+background-color: #f6f6f6
 
 ---
 class: center, middle
