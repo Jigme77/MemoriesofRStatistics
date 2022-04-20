@@ -315,8 +315,186 @@ class: top, left
 
 
 ---
-class: center, middle
+class: top, center
 
+# Richard Feynman
+
+.left-column[
+> ## The best teacher I never had.” 
+### ~ Bill Gates
+					
+					]
+
+.right-column[
+![richard-feynman](images/feynman.png)
+]
+
+
+---
+--
+# Feynman technique
+
+--
+### Teaching it to someone
+
+--
+> #### If you cannot explain it simply, you haven't understood
+
+
+--
+## How to go about it?
+
+--
+- ### Keep the language as simple as possible. Try translating it to your native tongue.
+
+- ### Drill down to the essence
+
+???
+In general, keep the language simple. Try explaining it in own language.
+
+Drill down to the essence. How can I explain it in simple words, as simple as possible. For example, what is a research hypothesis? It is a claim that you are making.
+
+---
+
+# Question to ask as you learn some new concepts? 
+
+## - Does this make sense? Could I explain this to a 5 year old?
+
+## - Explain it to your friends. Ask why? Try explaining, if you cannot explain, then go back and study the concept, fill the gap. 
+
+---
+
+.left-column[
+> ##  “When I teach, I get to learn it twice.” 
+### ~ Jim Kwik, Author of Limitless and Brain Coach
+
+]
+
+.right-colum[
+![jimkwik](images/jimkwik.png)
+]
+
+---
+
+.left-column[
+<img src =images/limitless.jpeg width="330" height = "500">
+
+]
+
+.right-column[
+
+> ## “It is not about mental intelligence; it is about mental fitness.” 
+~ Jim Kwik, Author and Coach
+
+> ## "Teaching is a great way to keep learning."
+~ Matthea Harvey - an American poet
+]
+
+---
+
+# The Science of Active Recall
+
+> ### Retrieving information memory through, essentially, testing yourself at every stage of the revision process.
+
+## Evidence
+
+--
+- The first group would read the material only once.
+
+--
+- The second group would read the material four times.
+
+--
+- The third group would read the material then were told to make a mind map.
+
+--
+- The fourth group would red the material once, then recall as much as possible.
+
+--
+> Karpicke, J. D., & Blunt, J. R. (2011). Retrieval practice produces more learning than elaborative studying with concept mapping. Science, 331(6018), 772-775.
+
+---
+# Strategy
+
+--
+### - Think about what you have learned
+
+--
+### - Test on the concept
+
+--
+### - Practice Retrieval
+
+--
+### - Trust the process
+
+> #### “Test ourselves as a way to learn new concepts.”
+
+
+> #### Improving students’ learning with effective learning techniques: promising direction from cognitive and educational psychology. ~ Dunlosky et al. (2013)
+						
+---
+class: left
+
+# Strategy
+
+.pull-left[
+## - Closed the book - and write notes
+
+## - Alternative to making notes - ask questions 
+
+## - Use Anki flashcards
+]
+
+.pull-right[
+<img src=images/biology.jpeg width = 500 height = 500>
+]
+
+---
+class: center
+.pull-left[<img src = images/makeitstick.png width = 400 height = 500>]
+
+
+> ### One of the most striking research findings is the power of active retrieval—testing—to strengthen memory, and that the more effortful the retrieval, the stronger the benefit."
+~ Peter C. Brown
+
+> ### One of the best habits a learner can instill in herself is regular self-quizzing to recalibrate he understanding of what she does and does not know.
+~ Peter C. Brown
+
+
+---
+
+# Taking notes during class
+----
+
+## - Handwritten notes are better (University of Washington Research)
+
+## - Harder you have to work for something, better the results
+
+## - Use mindmap to write notes
+
+> ### "Notetaking during class also drives away sleep."
+
+---
+
+# Taking notes after class
+
+## - Build active recall questions
+
+> ### "Consolidate understanding with active recall."
+
+<img src = images/excel-questions.png>
+
+---
+<img src = images/excel-questions.png>
+
+
+
+
+## - 
+
+---
+class: middle, center
 # Thank you!
 
 All art by [Allison Horst](https://www.allisonhorst.com/) & [Desirée De Leon](https://desiree.rbind.io/). Beautiful pictures from [unsplash](https://unsplash.com)
