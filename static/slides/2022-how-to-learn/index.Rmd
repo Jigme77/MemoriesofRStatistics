@@ -230,14 +230,89 @@ class: center
 ## Step 5 - 100: Falls down ...
 
 --
-> # Learning should be like learning to ride a bicycle. You don't give until you ride them.
+> # Learning should be like learning to ride a bicycle. You don't give up until you ride them.
+
+???
+Learning should be like riding a bicycle and treated like it. If you think carefully, the analogy is same. You will not leave learning the bike half-baked because it is life and death situation. However, in learning - we tend not to understand the concepts really well.
 
 ---
+class: top, center
+
+# The joy of riding a bike
+
+![cycle](images/cycle.jpg)
+
 
 ---
-background-image: url("images/cycle.jpg")
-background-size: contain
-background-color: #f6f6f6
+class: left, top
+
+--
+# So how do we really learn
+
+
+> ## Your mindset is the bedrock for learning
+
+--
+.pull-left[ 
+- ### I cannot grow
+- ### I am not intelligent
+--------------------
+--
+## Fixed Mindset
+]
+--
+.pull-right[
+- ### I can grow
+- ### I can work hard
+-------------------
+--
+## Growth Mindset
+]
+
+
+???
+before really going into it lets talk about our mindsets. Sometimes we feel that we are not cut out for something. I am not at this, I am not good at this. What you need to do is cultivate a growth mindset. Shift your perspective from fixed mindset to growth mindset. Say I can grow.
+
+---
+class: center, middle
+
+![mindset-carol-dweck](images/mindset.jpg)
+
+# [Mindset by Carol Dweck](https://www.amazon.com/Mindset-Psychology-Carol-S-Dweck/dp/0345472322)
+
+
+---
+class: inverse, center, middle
+
+--
+# How to Learn
+
+--
+## 1. UNDERSTANDING 
+
+--
+## 2. REMEMBERING
+
+--
+## 3. FOCUSING
+
+
+---
+class: middle, center
+
+# UNDERSTANDING
+
+???
+
+Understanding a concept is the first prerequisite to learning. If you do not understand, there is no point in remembering. 
+
+
+
+---
+class: top, left
+
+# Understanding
+
 
 ---
 class: center, middle
