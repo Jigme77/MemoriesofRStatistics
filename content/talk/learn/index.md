@@ -18,7 +18,7 @@ links:
 - icon: door-open
   icon_pack: fas
   name: website
-  url: https://slides/2022-how-to-learn/index.html#1
+  url: https://jigme-tenzin.netlify.app/talks
 - icon: github
   icon_pack: fab
   name: code
