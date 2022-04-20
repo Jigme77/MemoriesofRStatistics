@@ -458,7 +458,7 @@ class: center
 > ### One of the most striking research findings is the power of active retrieval—testing—to strengthen memory, and that the more effortful the retrieval, the stronger the benefit."
 ~ Peter C. Brown
 
-> ### One of the best habits a learner can instill in herself is regular self-quizzing to recalibrate he understanding of what she does and does not know.
+> ### One of the best habits a learner can instill in herself is regular self-quizzing to recalibrate her understanding of what she does and does not know.
 ~ Peter C. Brown
 
 
@@ -489,9 +489,35 @@ class: center
 <img src = images/excel-questions.png>
 
 
+---
+# Scoping the subject?
+
+> ### "Where does the subject fits in whole?"
+
+## - Don't lose the forest for the trees.
+
+## - Look at the syllabus or the module descriptor. 
+
+## - Get the gist of the subject as a whole.
+
+---
+# Why do you need to understand?
+
+- **First step towards real learning**
+
+- **If you understand, it is easier to retain**
+
+- **How do you know that you have understood?**
+    - Internal coherence
+    - Gold standard is to explain it to 5 year olds 
+- **Have a mental model of the subject or concepts**
+- **Create your own syllabus if you are stuck (find your own resouces)**
+
+> ### You can't know everything, but you have to know some things really well.
 
 
-## - 
+
+
 
 ---
 class: middle, center
