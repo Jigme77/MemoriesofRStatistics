@@ -516,7 +516,10 @@ class: center
 > ### You can't know everything, but you have to know some things really well.
 
 
+---
+class: middle, center
 
+# Remembering
 
 
 ---
