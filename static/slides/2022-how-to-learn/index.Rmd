@@ -521,6 +521,113 @@ class: middle, center
 
 # Remembering
 
+---
+
+# The Magic of Spaced Repetition
+
+.pull-left[
+## Cramming is for short-term
+## The forgetting curve - Hermann Ebbinghaus
+## Decay of memory
+]
+
+.pull-right[
+<img src = images/forget-curve.png width = 500 height = 500>
+]
+
+---
+class: middle, center
+##  The more you repeat a topic, longer the retention
+## Spaced repetition of a topic 
+
+> # Study a topic for some time. Then shift to another subject. Harder the retrieval, difficult it is to forget!
+
+---
+
+# Retrospective revision timetable
+
+## Retrospective
+ 
+ - # Based on topic
+ 
+<img src = images/retrospective.png>
+
+
+---
+class: left, top
+# Spaced repetition dairy
+----
+ ## Building spaced repetition dairy (Prospective diary)
+  - ## 1st of august – Tissues
+  
+ - ## 2nd of August – Tissues
+ 
+ - ## 9th of August – Joints
+ 
+ - ## 17th of August – Blood
+
+---
+# The power of interleaved practice
+----
+
+## Mix up practice
+Choose a topic, study for one hour, next hour choose another topic
+
+## Evidence show when some things are harder, then people learn
+Loads of evidence especially math practice
+
+---
+class: center, middle
+> ## Make you study hard. 
+Mix with Dzongkha, nutrition, academic skills within one study session
+
+---
+class: middle, center
+
+--
+# Rereading your notes?
+
+--
+## Rereading is probably waste of time
+ 
+--
+> “A wealth of research has shown that passive repetitive reading produces little or no benefit for learning. Yet, not only was repetitive reading the most frequently listed strategy, it was also the strategy most often listed as students’ number one choice.”
+
+> Dunlosky et al., 2013
+
+---
+
+
+
+# "Reread for pleasure, if you have to learn, practice retrieval."
+
+<img src = images/reading.jpg>
+
+---
+# So, why do you enjoy rereading?
+.pull-left[
+
+
+## Easy
+
+## Illusion of understanding
+
+## Passive - don't have to work hard
+]
+
+.pull-right[
+<img src = images/rereading.jpg height = 500 width = 500>
+]
+
+---
+# How to highlight effectively
+ - ## Highlighting is not effective – low utility
+ - ## Highlighting is better than passive rereading
+ - ## Can come back to highlighted paragraph
+ - ## Little bit of advantage if text are highlighted
+ - ## Sort of useful but low utility
+ - ## Helps to concentrate
+ - ## Looks pretty
 
 ---
 class: middle, center
