@@ -137,7 +137,7 @@ enableEmoji = true
   name = "Publications"
   title = "Publications"
   url = "/publications/"
-  weight = 5
+  weight = 6
  ##[[menu.header]]
  #   name = "Elements"
    # title = "Element Page"
