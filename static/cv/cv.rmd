@@ -1,0 +1,170 @@
+---
+title: "Jigme Tenzin's CV"
+author: Jigme Tenzin
+date: "`r Sys.Date()`"
+params:
+  pdf_mode:
+    value: true
+output:
+  pagedown::html_resume:
+    css: ['dd_cv.css', 'resume']
+    self_contained: true
+knit: pagedown::chrome_print
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  results='asis', 
+  echo = FALSE
+)
+
+library(magrittr) # For the pipe
+source("cv_printing_functions.r")
+
+# Read in all data and initialize a CV printer object
+CV <- create_CV_object(
+  data_location = "https://docs.google.com/spreadsheets/d/1_zXYDbDmgBj3pp2Ez53CjCMtUq8bLO6pvwxxdnRRNTY/edit#gid=917338460",  
+  pdf_mode = params$pdf_mode
+)
+
+```
+
+
+```{r}
+# When in pdf export mode the little dots are unaligned, so fix that with some conditional CSS.
+if(params$pdf_mode) {
+    cat("
+<style>
+:root{
+  --decorator-outer-offset-left: -6.5px;
+}
+</style>")
+}
+```
+
+
+Aside
+================================================================================
+
+```{r}
+# Build interactive network of positions colored by section
+# and connected if they occurred in the same year
+datadrivencv::build_network_logo(CV$entries_data)
+
+```
+<!--![Jigme Tenzin](/Users/jigmetenzin/Documents/Curriculum Vitae/jigme-photo.jpeg){height=150%, width=80%} -->
+
+
+```{r}
+#if(params$pdf_mode){
+ # cat("View this CV online with links at jigme-tenzin.netlify.app/cv")
+#} else {
+ # cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/jigme77/cv/raw/master/jigme_cv.pdf)")
+#}
+```
+
+Contact {#contact}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %>% print_contact_info()
+```
+
+
+
+Language Skills {#skills}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %>% print_skill_bars()
+```
+
+
+
+<!--- Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
+
+The CV is forked and modified using `datadrivencv` [on github.com/nstrayer/cv](https://github.com/nstrayer/datadrivencv).
+--->
+Last updated on `r Sys.Date()`.
+
+
+
+Main
+================================================================================
+
+Jigme Tenzin {#title}
+--------------------------------------------------------------------------------
+
+```{r}
+# Note the special double pipe so we modify the CV object in place
+CV %<>% print_text_block("intro") 
+```
+
+
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('education')
+```
+
+
+
+Professional Experience {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('professional_experience')
+```
+
+
+
+Grants and Awards {data-icon=suitcase}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('awards')
+```
+
+<!-- These breaks just force a new page so section doesnt get cut off -->
+<br>
+<br>
+<br>
+
+Teaching Experience {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+
+```{r}
+CV %<>% print_section('teaching_positions')
+```
+
+
+
+
+
+
+Publications, Posters, and Talks {data-icon=book}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('academic_articles')
+```
+
+
+```{r}
+CV %<>% print_links() 
+```
+
+Declaration {data-icon=folder-open}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_text_block("outro") 
+```
+
+
