@@ -56,11 +56,11 @@ datadrivencv::build_network_logo(CV$entries_data)
 
 
 ```{r}
-#if(params$pdf_mode){
- # cat("View this CV online with links at jigme-tenzin.netlify.app/cv")
-#} else {
- # cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/jigme77/cv/raw/master/jigme_cv.pdf)")
-#}
+if(params$pdf_mode){
+  cat("View this CV online with links at jigme-tenzin.netlify.app/cv/cv/")
+} else {
+ cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/Jigme77/MemoriesofRStatistics/blob/main/static/cv/cv.pdf)")
+}
 ```
 
 Contact {#contact}
