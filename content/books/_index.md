@@ -1,7 +1,7 @@
 ---
-title: Welcome to my classes!
+title: What I am reading now!
 description: |
-  The website contains slides used during my classes.
+  Books are rewarding to read and understand.
 author: "Jigme Tenzin"
 show_post_thumbnail: true
 show_author_byline: true
