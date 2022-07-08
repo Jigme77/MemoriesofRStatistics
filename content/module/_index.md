@@ -1,6 +1,6 @@
 ---
 title: Classes I am teaching
-description: "Modules I am teaching and taught"
+description: "BSc in Animal Science"
 author: "Jigme Tenzin"
 show_post_thumbnail: true
 show_author_byline: false
