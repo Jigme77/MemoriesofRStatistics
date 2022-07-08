@@ -121,7 +121,7 @@ enableEmoji = true
   [[menu.header]]
     name = "Classes"
     title = "Classes"
-    url = "/classes/"
+    url = "/module/"
     weight = 3
   [[menu.header]]
     name = "cv"
@@ -138,11 +138,11 @@ enableEmoji = true
   title = "Publications"
   url = "/publications/"
   weight = 6
- ##[[menu.header]]
- #   name = "Elements"
-   # title = "Element Page"
-  #  url = "/elements/"
-   # weight = 6
+ [[menu.header]]
+  name = "Books"
+  title = "Books that I am reading or in the reading list"
+  url = "/books/"
+  weight = 6
 
   # Configure footer  
   [[menu.footer]]
