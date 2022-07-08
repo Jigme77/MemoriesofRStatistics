@@ -8,8 +8,6 @@ show_intro: true
 intro: |
  - Veterinary Sciences and Animal Husbandry from College of Veterinary Sciences and Animal Husbandry, Central Agricultural University, Aizawl. 
  - Animal Genetics and Breeding from Khon Kaen University, Thailand
-
-**This website is currently getting updated with relevant information. Sorry for the inconvenience.**
   
 show_outro: false
 outro: |
