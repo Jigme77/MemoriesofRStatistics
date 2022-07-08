@@ -1,9 +1,9 @@
 ---
-title: "Alison Hill"
-subtitle: "Product Manager, Data Science Communication @RStudio"
-excerpt: "Product Manager, Data Science Communication @RStudio"
+title: "Statistics 301"
+subtitle: "BSc in Animal Science"
+excerpt: "Descriptive and Inferential Statistics"
 weight: 5
-author: "Alison Hill"
+author: "Jigme Tenzin"
 draft: false
 categories:
   - example
@@ -12,11 +12,11 @@ layout: single-sidebar
 links:
 - icon: link
   icon_pack: fas
-  name: https://alison.rbind.io/
-  url: https://alison.rbind.io/
+  name: https://jigmetenzin.rbind.io/
+  url: https://jigmetenzin.rbind.io/
 - icon: github
   icon_pack: fab
   name: source
-  url: https://github.com/rbind/apreshill
+  url: https://github.com/jigme77
 ---
 
