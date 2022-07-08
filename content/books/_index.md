@@ -11,9 +11,9 @@ layout: list-sidebar # list, list-sidebar, list-grid
 
 # for list-sidebar layout
 sidebar: 
-  title: Welcome to my classes.
+  title: Here I share what books I am currently reading.
   description: |
-    The website contains slides used during my classes.
+    List of books I am currently reading or read.
   author: "Jigme Tenzin"
   text_link_label: Subscribe via RSS
   text_link_url: /index.xml
