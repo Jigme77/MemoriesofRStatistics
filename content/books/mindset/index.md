@@ -11,4 +11,4 @@ categories:
 - evergreen
 ---
 
-Welcome to Statistics 301 -- where we have fun learning statistics and its varied application.
+Fixed mindset and growth mindset are two different way of operating our mindset. Many a times, we operate under the fixed mindset - I cannot do this, I am not talented, I was born like this - however, an alternative is to operate under the mindset of growth, where you seek every opportunity to learn and grow - your mind is open to growth and possibilities - as you practice more and learn more, you get equiped with prerequisite to succeed. 
