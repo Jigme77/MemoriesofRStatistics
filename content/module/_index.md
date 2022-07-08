@@ -1,7 +1,7 @@
 ---
-title: Who is using Hugo Apéro?
-description: "A collection of wild-caught Hugo Apéro example sites."
-author: "Alison Hill"
+title: Classes I am teaching
+description: "Modules I am teaching and taught"
+author: "Jigme Tenzin"
 show_post_thumbnail: true
 show_author_byline: false
 show_post_date: false
@@ -10,10 +10,10 @@ layout: list-grid # list, list-sidebar, list-grid
 
 # for list-sidebar layout
 sidebar: 
-  title: Who is using Hugo Apéro?
+  title: Classes taught
   description: |
-    A collection of wild-caught Hugo Apéro example sites.
-  author: "Alison Hill"
+    Classes taught to undergraduate students
+  author: "Jigme Tenzin"
   text_link_label: ""
   text_link_url: ""
   show_sidebar_adunit: false # show ad container
