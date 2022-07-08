@@ -11,7 +11,7 @@ layout: list-sidebar # list, list-sidebar, list-grid
 
 # for list-sidebar layout
 sidebar: 
-  title: Here I share what books I am currently reading.
+  title: Reading List
   description: |
     List of books I am currently reading or read.
   author: "Jigme Tenzin"
