@@ -46,15 +46,16 @@ if(params$pdf_mode) {
 Aside
 ================================================================================
 
-<!--```{r}
+```{r}
 # Build interactive network of positions colored by section
 # and connected if they occurred in the same year
 datadrivencv::build_network_logo(CV$entries_data) 
 
-``` -->
-![Jigme Tenzin](/Users/jigmetenzin/Documents/Curriculum Vitae/jigme-photo.jpeg){height=150%, width=80%} 
+``` 
+<!-- 
+![Jigme Tenzin](/Users/jigmetenzin/Documents/Curriculum Vitae/jigme-photo.jpeg){height=150%, width=80%}
 
-
+-->
 ```{r}
 if(params$pdf_mode){
   cat("View this CV online with links at https://jigmetenzin.rbind.io/cv/cv")
