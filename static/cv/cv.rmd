@@ -156,10 +156,30 @@ Publications {data-icon=book}
 CV %<>% print_section('academic_articles')
 ```
 
+Short Courses offered 
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('courses_offered')
+```
+
+
 
 ```{r}
 CV %<>% print_links() 
 ```
+
+
+
+References
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('references')
+```
+
+
+
 
 Declaration {data-icon=folder-open}
 --------------------------------------------------------------------------------
