@@ -1,7 +1,7 @@
 ---
 title: StatVet
 description: |
-  StatVet, making decisions about which test to use.
+  Choose statistical depending on your criteria.
 author: "Jigme Tenzin"
 show_post_thumbnail: true
 show_author_byline: true
@@ -14,13 +14,13 @@ layout: list # list, list-sidebar
 sidebar: 
   title: StatVet
   description: |
-    Statistical decision making, which test do I perform?
+    StatVet: A tool to select your statistical tests.
     
     Check out the _index.md file in the /talk folder 
     to edit this content. 
   author: "Jigme Tenzin"
   text_link_label: Subscribe via RSS
-  text_link_url: statvet/index.xml
+  text_link_url: /statvet/index.xml
   show_sidebar_adunit: false # show ad container
 
 # set up common front matter for all pages inside blog/
