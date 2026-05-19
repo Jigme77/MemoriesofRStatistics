@@ -15,7 +15,6 @@ sidebar:
   title: Statistical Tests
   description: |
     Which test do I use?
-    
     Check out the _index.md file in the /talk folder 
     to edit this content. 
   author: "Jigme Tenzin"
