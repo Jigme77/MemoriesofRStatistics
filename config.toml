@@ -128,16 +128,16 @@ enableEmoji = true
     title = "Curriculum Vitae"
     url = "/cv/cv/index.html/"
     weight = 4
-  [[menu.header]]
-    name = "Talks"
-    title = "Talks"
-    url = "/talk/"
-    weight = 3
+  #[[menu.header]]
+    #name = "Talks"
+    #title = "Talks"
+    #url = "/talk/"
+    #weight = 3
 [[menu.header]]
     name = “StatVet”
     title = “StatVet”
     url = “/statvet/“
-    weight = 5
+    weight =3
  [[menu.header]]
   name = "Publications"
   title = "Publications"
