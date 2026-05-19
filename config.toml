@@ -132,7 +132,7 @@ enableEmoji = true
  [[menu.header]]
     name = "StatVet"
     title = "StatVet"
-    url = "/statvet/statvet/index.html”
+    url = "/statvet/index.html”
     weight =3
   [[menu.header]]
     name = "Publications"

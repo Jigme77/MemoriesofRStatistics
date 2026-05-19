@@ -20,7 +20,7 @@ sidebar:
     to edit this content. 
   author: "Jigme Tenzin"
   text_link_label: Subscribe via RSS
-  text_link_url: /statvet/index.xml
+  text_link_url: index.xml
   show_sidebar_adunit: false # show ad container
 
 # set up common front matter for all pages inside blog/
