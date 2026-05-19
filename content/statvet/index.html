@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+  <title>Applied Statistics · Animal & Veterinary Sciences</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f0f4f8;
+      color: #1a2b3c;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      scroll-behavior: smooth;
+      background: linear-gradient(135deg, #f5f7fc 0%, #eef2f6 100%);
+    }
+
+    .container {
+      max-width: 1350px;
+      width: 100%;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-radius: 3rem;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.08), 0 0 0 1px rgba(255,255,255,0.6);
+      padding: 2.5rem 2.2rem 3.5rem;
+      background: #ffffff;
+      margin-bottom: 2rem;
+    }
+
+    h1, h2, h3 {
+      font-weight: 650;
+      letter-spacing: -0.4px;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      background: linear-gradient(145deg, #0b2b44, #1e4a6b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.9rem;
+      color: #132e44;
+      border-left: 7px solid #3b7a9e;
+      padding-left: 1.3rem;
+      margin: 2.8rem 0 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      color: #1e3b4f;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: #33495e;
+      font-size: 1.15rem;
+      margin-bottom: 2rem;
+      font-weight: 400;
+      background: #eef3fa;
+      padding: 1.2rem 1.8rem;
+      border-radius: 2rem;
+      border: 1px solid #dae2ed;
+      backdrop-filter: blur(4px);
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e9eff6;
+      border-radius: 2rem;
+      padding: 1.6rem 1.4rem;
+      box-shadow: 0 10px 20px -8px rgba(0,20,40,0.04);
+      transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
+      display: flex;
+      flex-direction: column;
+      background: #fcfdff;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 38px -12px rgba(9, 30, 50, 0.12);
+      border-color: #b8cee4;
+      background: white;
+    }
+
+    .icon-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #e3edf8;
+      padding: 0.35rem 1rem;
+      border-radius: 2.5rem;
+      font-size: 0.8rem;
+      font-weight: 650;
+      color: #153e5a;
+      margin-bottom: 0.9rem;
+      width: fit-content;
+      letter-spacing: 0.2px;
+    }
+
+    .btn {
+      background: white;
+      border: 1px solid #cddae8;
+      padding: 0.65rem 1.4rem;
+      border-radius: 3rem;
+      font-weight: 550;
+      color: #1f3347;
+      cursor: pointer;
+      background: #f9fbfd;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      margin-top: 0.7rem;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }
+
+    .btn:hover {
+      background: #ecf3fc;
+      border-color: #7a9bcb;
+      color: #0b2940;
+      box-shadow: 0 8px 14px rgba(44,82,130,0.1);
+    }
+
+    .btn-primary {
+      background: #163a57;
+      border-color: #163a57;
+      color: white;
+      font-weight: 550;
+    }
+
+    .btn-primary:hover {
+      background: #0f2e47;
+      border-color: #0f2e47;
+    }
+
+    svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .flowchart-box {
+      background: #fafcff;
+      border-radius: 2.5rem;
+      padding: 2rem;
+      border: 1px solid #dde5f0;
+      margin: 2rem 0;
+      background: linear-gradient(0deg, #ffffff, #f6fafd);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.03);
+    }
+
+    pre, code {
+      background: #1e2b3c;
+      color: #e5ecf3;
+      border-radius: 1rem;
+      padding: 1rem 1.2rem;
+      font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+      font-size: 0.85rem;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      margin: 0.8rem 0;
+      line-height: 1.5;
+    }
+
+    .quiz-box {
+      background: #f8fafd;
+      border-radius: 1.8rem;
+      padding: 1.8rem;
+      margin: 1rem 0;
+      border: 1px solid #e2eaf5;
+    }
+
+    .option-btn {
+      display: block;
+      width: 100%;
+      text-align: left;
+      margin: 0.5rem 0;
+      background: white;
+      border: 1px solid #d7e0ec;
+      padding: 0.9rem 1.2rem;
+      border-radius: 1.4rem;
+      transition: 0.2s;
+      cursor: pointer;
+      font-weight: 500;
+      background: #ffffff;
+    }
+
+    .option-btn:hover {
+      background: #e7f0fd;
+      border-color: #7e9bc0;
+      transform: translateX(4px);
+    }
+
+    .correct-feedback {
+      color: #0c4e2e;
+      background: #dff0e4;
+      padding: 0.4rem 1.2rem;
+      border-radius: 2rem;
+      font-weight: 500;
+    }
+
+    .incorrect-feedback {
+      color: #a12e2e;
+      background: #ffe9e9;
+    }
+
+    hr {
+      margin: 2rem 0;
+      border: 0.5px solid #e2e9f2;
+    }
+
+    .flowchart-node {
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .flowchart-node:hover {
+      filter: drop-shadow(0 6px 12px rgba(0,80,130,0.2));
+      stroke-width: 2.2;
+    }
+    .active-node {
+      stroke: #1f5680;
+      stroke-width: 2.8;
+      fill: #d7e6ff;
+    }
+
+    @media (max-width: 650px) {
+      body { padding: 0.3rem; }
+      .container { padding: 1.5rem; border-radius: 2rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- HOME -->
+  <section id="home">
+    <h1>📊 Applied Statistics <span style="font-size:1.8rem;">·</span> Animal & Veterinary Sciences</h1>
+    <div class="subtitle">
+      <strong>Choose the right test · Real datasets · R code · Interactive quizzes</strong><br>
+      <span style="font-size:0.95rem;">Designed for beginners — clear language, veterinary examples, no statistics fear.</span>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin: 1.8rem 0;">
+      <div style="flex:1; min-width:200px; background:#f5f9ff; border-radius:1.5rem; padding:1.2rem;">
+        <h3>🎯 Learning outcomes</h3>
+        <ul style="padding-left:1.4rem; list-style-type:'✓   ';">
+          <li>Match research question to correct test</li>
+          <li>Check assumptions (normality, independence)</li>
+          <li>Run analyses in R with confidence</li>
+          <li>Interpret p-values and report results</li>
+        </ul>
+      </div>
+      <div style="flex:1; background:#f4f8fc; border-radius:1.5rem; padding:1.2rem;">
+        <h3>🧭 How to use</h3>
+        <p><strong>1.</strong> Start with <strong>Decision Guide</strong> & interactive flowchart.<br>
+        <strong>2.</strong> Download practice datasets.<br>
+        <strong>3.</strong> Copy R code from library.<br>
+        <strong>4.</strong> Test yourself with auto-graded quizzes.<br>
+        <strong>5.</strong> Complete assignments using templates.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATISTICAL DECISION GUIDE -->
+  <h2>📌 Statistical decision guide</h2>
+  <div class="cards-grid" id="testCards"></div>
+
+  <!-- INTERACTIVE SVG FLOWCHART -->
+  <h2>🗺️ Interactive decision flowchart <span style="font-size:1rem; font-weight:400;">(click nodes)</span></h2>
+  <div class="flowchart-box">
+    <svg viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto; font-family:system-ui;">
+      <defs>
+        <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%"><feDropShadow dx="1" dy="3" stdDeviation="3" flood-opacity="0.15"/></filter>
+        <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 Z" fill="#2f4858"/></marker>
+      </defs>
+      <g filter="url(#shadow)">
+        <rect id="node1" x="280" y="15" width="180" height="42" rx="21" class="flowchart-node" fill="#e7f0fa" stroke="#2c5282" stroke-width="1.8"/>
+        <text x="370" y="41" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b2b44" pointer-events="none">Comparing groups?</text>
+        <line x1="370" y1="57" x2="370" y2="82" stroke="#2f4858" stroke-width="2" marker-end="url(#arrow)"/>
+        
+        <rect id="node2" x="260" y="85" width="220" height="42" rx="21" class="flowchart-node" fill="#f0f5fd" stroke="#2c5282" stroke-width="1.8"/>
+        <text x="370" y="111" text-anchor="middle" font-size="13" font-weight="600" fill="#0f2f44" pointer-events="none">How many groups?</text>
+        
+        <line x1="280" y1="127" x2="160" y2="175" stroke="#2f4858" stroke-width="2" marker-end="url(#arrow)"/>
+        <line x1="460" y1="127" x2="580" y2="175" stroke="#2f4858" stroke-width="2" marker-end="url(#arrow)"/>
+        
+        <rect id="node3" x="40" y="178" width="240" height="40" rx="17" class="flowchart-node" fill="#ffffff" stroke="#2c5f8a" stroke-width="1.8"/>
+        <text x="160" y="203" text-anchor="middle" font-size="12" font-weight="600" fill="#152e42">2 groups ➔ t-test / Mann-Whitney</text>
+        
+        <rect id="node4" x="520" y="178" width="240" height="40" rx="17" class="flowchart-node" fill="#ffffff" stroke="#2c5f8a" stroke-width="1.8"/>
+        <text x="640" y="203" text-anchor="middle" font-size="12" font-weight="600" fill="#152e42">3+ groups ➔ ANOVA / Kruskal</text>
+        
+        <line x1="370" y1="225" x2="370" y2="260" stroke="#2f4858" stroke-width="2" marker-end="url(#arrow)"/>
+        <rect id="node5" x="230" y="265" width="280" height="42" rx="21" class="flowchart-node" fill="#e3eefa" stroke="#1e3b5a" stroke-width="1.8"/>
+        <text x="370" y="291" text-anchor="middle" font-size="12" font-weight="600">Outcome type? continuous/ordinal/binary</text>
+        
+        <line x1="370" y1="307" x2="370" y2="340" stroke="#2f4858" stroke-width="2" marker-end="url(#arrow)"/>
+        <rect id="node6" x="190" y="345" width="360" height="42" rx="21" class="flowchart-node" fill="#d9e9f9" stroke="#1e3b5a" stroke-width="1.8"/>
+        <text x="370" y="371" text-anchor="middle" font-size="12" font-weight="bold">Normal? Yes → parametric | No → non‑parametric</text>
+      </g>
+    </svg>
+    <div id="flowchartHint" style="margin-top:1rem; padding:0.6rem 1.2rem; background:#f0f5fe; border-radius:2rem; font-weight:500; color:#1e405b;">
+      💡 Click on any decision node above to see test suggestions.
+    </div>
+  </div>
+
+  <!-- DATASETS -->
+  <h2>📁 Practice datasets (downloadable CSV)</h2>
+  <div class="cards-grid" id="datasetCards"></div>
+
+  <!-- CHARTS (Canvas) -->
+  <h2>📈 Quick charts</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 2.5rem; align-items: flex-start; justify-content: center;">
+    <canvas id="barCanvas" width="300" height="200" style="background:#fafcff; border-radius:1.5rem; box-shadow:0 6px 18px rgba(0,0,0,0.04);"></canvas>
+    <canvas id="scatterCanvas" width="300" height="200" style="background:#fafcff; border-radius:1.5rem; box-shadow:0 6px 18px rgba(0,0,0,0.04);"></canvas>
+  </div>
+
+  <!-- R CODE LIBRARY -->
+  <h2>🧪 R code library</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:1.2rem;">
+    <div><strong>📌 Independent t-test</strong><pre>t.test(weight ~ breed, data = cattle, var.equal=TRUE)</pre></div>
+    <div><strong>📌 ANOVA + Tukey</strong><pre>model <- aov(cortisol ~ housing, data = hens)
+TukeyHSD(model)</pre></div>
+    <div><strong>📌 Kruskal-Wallis</strong><pre>kruskal.test(pain ~ treatment, data = dogs)</pre></div>
+    <div><strong>📌 Chi-square</strong><pre>chisq.test(table(breed, disease))</pre></div>
+    <div><strong>📌 Linear regression</strong><pre>lm(milk_yield ~ feed + age, data = cows)</pre></div>
+    <div><strong>📌 Logistic regression</strong><pre>glm(brd ~ weight + temp, family=binomial, data=calves)</pre></div>
+    <div><strong>📌 Kaplan-Meier</strong><pre>library(survival)
+survfit(Surv(time,status) ~ treatment)</pre></div>
+  </div>
+
+  <!-- AUTO-GRADED QUIZ -->
+  <h2>📝 Auto-graded quiz</h2>
+  <div id="quizContainer" class="quiz-box"></div>
+  <div style="display: flex; gap:1.2rem; align-items:center; margin-top:1rem; flex-wrap:wrap;">
+    <span id="scoreDisplay" style="font-weight:650; background:#e4ecf7; padding:0.4rem 1.2rem; border-radius:2rem;"></span>
+    <button class="btn" id="resetQuizBtn">↺ Reset quiz</button>
+  </div>
+
+  <!-- ASSIGNMENTS -->
+  <h2>📋 Practical assignments</h2>
+  <div class="cards-grid" id="assignmentCards"></div>
+
+  <!-- REPORT TEMPLATES -->
+  <h2>📄 Student report templates</h2>
+  <div style="display:flex; flex-wrap:wrap; gap:1rem; margin-bottom:1rem;">
+    <button class="btn" id="copyTemplateBtn">📋 Copy short report template</button>
+    <button class="btn" id="copyRTemplateBtn">📋 Copy R analysis template</button>
+  </div>
+  <pre id="templatePreview" style="display:none;">### Statistical Report Template
+Method: [test name]  
+Outcome: [variable]  
+Groups: [list]  
+Result: statistic = ..., p = ...  
+Conclusion: [significant/not]</pre>
+
+  <!-- TEACHING NOTES -->
+  <h2>👩‍🏫 Instructor section</h2>
+  <details style="margin:1rem 0; background:#f5f9ff; padding:1.2rem; border-radius:1.5rem; border:1px solid #dce5f0;">
+    <summary style="font-weight:700; font-size:1.1rem;">Weekly plan & teaching tips</summary>
+    <p><strong>Week 1:</strong> t-test using cattle weight gain.<br>
+    <strong>Week 2:</strong> ANOVA & housing stress in hens.<br>
+    <strong>Common difficulty:</strong> normality assumption – use the interactive flowchart above.</p>
+  </details>
+</div>
+
+<script>
+  (function() {
+    // ---------- TEST CARDS DATA ----------
+    const tests = [
+      { name:"Independent t-test", cat:"Comparing groups", example:"Angus vs Hereford weight gain", outcome:"continuous", assumption:"normality, independence", r:"t.test(weight~breed, data=cattle)" },
+      { name:"Paired t-test", cat:"Comparing groups", example:"Pre/post heart rate in horses", outcome:"continuous", assumption:"differences normal", r:"t.test(pre, post, paired=TRUE)" },
+      { name:"One-way ANOVA", cat:"Comparing groups", example:"Cortisol in cage/free-range/aviary hens", outcome:"continuous", assumption:"normality, homogeneity", r:"aov(cortisol~housing)" },
+      { name:"Repeated ANOVA", cat:"Comparing groups", example:"Dog pain over time", outcome:"continuous", assumption:"sphericity", r:"aov(pain~time+Error(id))" },
+      { name:"Kruskal-Wallis", cat:"Non-parametric", example:"Pain scores (ordinal) in dogs", outcome:"ordinal", assumption:"independent groups", r:"kruskal.test(pain~treatment)" },
+      { name:"Mann-Whitney U", cat:"Non-parametric", example:"Lameness scores", outcome:"ordinal", assumption:"independent", r:"wilcox.test(score~group)" },
+      { name:"Chi-square", cat:"Categorical", example:"Breed & hip dysplasia", outcome:"categorical", assumption:"expected freq>5", r:"chisq.test(table)" },
+      { name:"Fisher's Exact", cat:"Categorical", example:"Small sample disease", outcome:"binary", assumption:"none", r:"fisher.test(table)" },
+      { name:"Linear regression", cat:"Regression", example:"Milk yield ~ feed + age", outcome:"continuous", assumption:"linearity, normality residuals", r:"lm(yield~feed+age)" },
+      { name:"Logistic regression", cat:"Regression", example:"BRD risk ~ weight + temp", outcome:"binary", assumption:"linear log-odds", r:"glm(brd~., binomial)" },
+      { name:"Kaplan-Meier", cat:"Survival", example:"Dog cancer survival", outcome:"time-to-event", assumption:"censoring independent", r:"survfit(Surv(time,status)~tx)" },
+      { name:"Cox regression", cat:"Survival", example:"Treatment effect on survival", outcome:"time-to-event", assumption:"proportional hazards", r:"coxph(Surv(time,status)~tx)" }
+    ];
+
+    const testCardsDiv = document.getElementById('testCards');
+    tests.forEach(t => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <span class="icon-tag">📌 ${t.cat}</span>
+        <h3>${t.name}</h3>
+        <p><strong>When:</strong> ${t.example}</p>
+        <p><strong>Outcome:</strong> ${t.outcome} | <strong>Assumptions:</strong> ${t.assumption}</p>
+        <code>${t.r}</code>
+        <p style="font-size:0.8rem; margin-top:0.4rem;">✅ Vet example: ${t.example}</p>
+      `;
+      testCardsDiv.appendChild(card);
+    });
+
+    // ---------- INTERACTIVE FLOWCHART ----------
+    const nodeMessages = {
+      node1: "Start here: Are you comparing groups? If yes, move down. If exploring relationship → regression.",
+      node2: "How many groups? 2 groups → t-test family. 3+ groups → ANOVA or Kruskal-Wallis.",
+      node3: "2 groups: If normal → independent t-test. If not normal → Mann-Whitney U.",
+      node4: "3+ groups: Normal & equal variance → One-way ANOVA. Otherwise → Kruskal-Wallis.",
+      node5: "Outcome type: continuous (weight), ordinal (pain score), binary (disease yes/no).",
+      node6: "Check normality! Yes → parametric (t-test, ANOVA). No → non-parametric (Mann-Whitney, Kruskal-Wallis)."
+    };
+    const hintDiv = document.getElementById('flowchartHint');
+    document.querySelectorAll('.flowchart-node').forEach(node => {
+      node.addEventListener('click', (e) => {
+        document.querySelectorAll('.flowchart-node').forEach(n => n.classList.remove('active-node'));
+        node.classList.add('active-node');
+        const id = node.id;
+        if (nodeMessages[id]) {
+          hintDiv.innerHTML = `💡 <strong>${nodeMessages[id]}</strong>`;
+        } else {
+          hintDiv.innerHTML = `💡 Click a decision node for guidance.`;
+        }
+      });
+    });
+
+    // ---------- DATASETS ----------
+    const datasets = [
+      { name:"cattle_weight_gain.csv", desc:"Angus vs Hereford daily gain", question:"Does breed affect weight gain?", test:"Independent t-test", generate: ()=> "breed,weight_gain\nAngus,1.45\nAngus,1.52\nHereford,1.32\nHereford,1.28\nAngus,1.61\nHereford,1.35" },
+      { name:"housing_stress.csv", desc:"Cortisol in hens (cage/free-range/aviary)", question:"Does housing affect stress?", test:"One-way ANOVA", generate: ()=> "housing,cortisol\ncage,12.3\nfree_range,9.1\naviary,10.4\ncage,13.0\nfree_range,8.7" },
+      { name:"dog_pain_scores.csv", desc:"Pain scores (0-10) by analgesic", question:"Pain difference across treatments?", test:"Kruskal-Wallis", generate: ()=> "treatment,pain\nA,3\nB,5\nC,2\nA,4\nB,6" },
+      { name:"breed_disease.csv", desc:"Breed vs hip dysplasia", question:"Association breed-disease?", test:"Chi-square", generate: ()=> "breed,disease\nLabrador,Yes\nBeagle,No\nLabrador,No\nBeagle,Yes\nLabrador,Yes" },
+      { name:"milk_yield.csv", desc:"Milk yield, feed intake, age", question:"Predict milk yield", test:"Linear regression", generate: ()=> "milk_yield,feed,age\n28,15,4\n32,17,5\n25,13,3\n30,16,5" },
+      { name:"brd_risk.csv", desc:"BRD (0/1) weight temp", question:"Predict BRD risk", test:"Logistic regression", generate: ()=> "brd,weight,temp\n0,210,101.2\n1,185,103.1\n0,220,100.8\n1,170,102.5" },
+      { name:"survival_dogs.csv", desc:"Survival time days, status", question:"Compare survival curves", test:"Kaplan-Meier", generate: ()=> "time,status,treatment\n120,1,A\n95,0,A\n200,1,B\n150,1,B\n80,0,A" }
+    ];
+
+    const datasetDiv = document.getElementById('datasetCards');
+    datasets.forEach(ds => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `<strong>📄 ${ds.name}</strong><p>${ds.desc}</p><p>🔍 ${ds.question}</p><p>✅ Suggested: ${ds.test}</p>`;
+      const btn = document.createElement('button');
+      btn.className = 'btn';
+      btn.textContent = '⬇ Download CSV';
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const csv = ds.generate();
+        const blob = new Blob([csv], {type:'text/csv'});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url; a.download = ds.name; a.click();
+        URL.revokeObjectURL(url);
+      });
+      card.appendChild(btn);
+      datasetDiv.appendChild(card);
+    });
+
+    // ---------- CANVAS CHARTS ----------
+    function drawBarChart() {
+      const canvas = document.getElementById('barCanvas');
+      if(!canvas) return;
+      const ctx = canvas.getContext('2d');
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      ctx.fillStyle='#1f4973'; ctx.fillRect(55,105,45,65);
+      ctx.fillStyle='#5982b0'; ctx.fillRect(140,70,45,100);
+      ctx.fillStyle='#1e293b'; ctx.font='bold 12px system-ui';
+      ctx.fillText('Group A',48,185); ctx.fillText('Group B',133,185);
+      ctx.fillStyle='#33495e'; ctx.font='11px system-ui';
+      ctx.fillText('Bar chart comparison',80,35);
+    }
+    function drawScatter() {
+      const canvas = document.getElementById('scatterCanvas');
+      if(!canvas) return;
+      const ctx = canvas.getContext('2d');
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      const points = [[70,130],[100,105],[140,85],[180,65],[220,45]];
+      points.forEach(([x,y])=>{
+        ctx.beginPath(); ctx.arc(x,y,5,0,2*Math.PI); ctx.fillStyle='#1d4b6e'; ctx.fill(); ctx.strokeStyle='white'; ctx.stroke();
+      });
+      ctx.strokeStyle='#96afc4'; ctx.lineWidth=2; ctx.beginPath(); ctx.moveTo(50,145); ctx.lineTo(240,38); ctx.stroke();
+      ctx.fillStyle='#33495e'; ctx.font='11px system-ui'; ctx.fillText('Scatter + trend',100,30);
+    }
+    drawBarChart(); drawScatter();
+
+    // ---------- QUIZ ----------
+    const quizQuestions = [
+      { q:"You compare weight gain in Angus vs Hereford. Data normal. Test?", options:["t-test","Chi-square","Kaplan-Meier"], correct:0, exp:"Independent t-test compares two independent groups."},
+      { q:"Pain scores (0-10) across 3 treatments, not normal. Test?", options:["ANOVA","Kruskal-Wallis","t-test"], correct:1, exp:"Non-parametric alternative to ANOVA."},
+      { q:"Association between breed (Lab/Beagle) and disease (yes/no).", options:["Chi-square","Linear regression","t-test"], correct:0},
+      { q:"Predict milk yield from feed intake (continuous).", options:["Logistic","Linear regression","Fisher"], correct:1},
+      { q:"Survival time with censoring. Test?", options:["Kaplan-Meier","ANOVA","Chi-square"], correct:0},
+      { q:"Binary outcome (BRD yes/no).", options:["Logistic regression","t-test","Kruskal"], correct:0},
+      { q:"Assumption of normality important for?", options:["t-test/ANOVA","Chi-square","Mann-Whitney"], correct:0},
+      { q:"Paired design: pre/post same animal.", options:["Paired t-test","Independent t-test","ANOVA"], correct:0}
+    ];
+    let currentQ = 0, score = 0;
+    const quizDiv = document.getElementById('quizContainer');
+    const scoreSpan = document.getElementById('scoreDisplay');
+    function renderQuiz(){
+      if(currentQ >= quizQuestions.length){
+        quizDiv.innerHTML = `<h3>✅ Quiz complete! Your score: ${score}/${quizQuestions.length}</h3>`;
+        scoreSpan.textContent = `Final: ${score}/${quizQuestions.length}`;
+        return;
+      }
+      const q = quizQuestions[currentQ];
+      let html = `<p style="font-weight:600;">Q${currentQ+1}: ${q.q}</p>`;
+      q.options.forEach((opt, idx)=>{
+        html += `<button class="option-btn" data-opt="${idx}">${opt}</button>`;
+      });
+      quizDiv.innerHTML = html;
+      document.querySelectorAll('.option-btn').forEach(btn=>{
+        btn.addEventListener('click', (e)=>{
+          const selected = parseInt(e.target.dataset.opt);
+          const isCorrect = (selected === q.correct);
+          if(isCorrect) score++;
+          quizDiv.innerHTML += `<p class="${isCorrect?'correct-feedback':'incorrect-feedback'}">${isCorrect?'✔ Correct':'✘ Incorrect'} — ${q.exp||''}</p>`;
+          currentQ++;
+          scoreSpan.textContent = `Score: ${score}/${currentQ}`;
+          setTimeout(renderQuiz, 900);
+        });
+      });
+    }
+    renderQuiz();
+    document.getElementById('resetQuizBtn').addEventListener('click',()=>{
+      currentQ=0; score=0; renderQuiz(); scoreSpan.textContent='';
+    });
+
+    // ---------- ASSIGNMENTS ----------
+    const assignments = [
+      {title:"Assignment 1: t-test", objective:"Compare Angus vs Hereford weight gain using cattle_weight_gain.csv", steps:"Download CSV → t.test() → report p-value"},
+      {title:"Assignment 2: ANOVA", objective:"Analyze housing_stress.csv cortisol", steps:"ANOVA + Tukey post-hoc"},
+      {title:"Assignment 3: Kruskal-Wallis", objective:"dog_pain_scores.csv", steps:"Non-parametric comparison"},
+      {title:"Assignment 4: Chi-square", objective:"breed_disease.csv association", steps:"chisq.test()"},
+      {title:"Assignment 5: Regression", objective:"milk_yield.csv prediction", steps:"lm() and interpretation"}
+    ];
+    const assignDiv = document.getElementById('assignmentCards');
+    assignments.forEach(a=>{
+      const card = document.createElement('div'); card.className='card';
+      card.innerHTML=`<h3>📌 ${a.title}</h3><p>${a.objective}</p><p>📋 ${a.steps}</p>`;
+      assignDiv.appendChild(card);
+    });
+
+    // Template copy
+    document.getElementById('copyTemplateBtn').addEventListener('click',()=>{
+      navigator.clipboard?.writeText("### Statistical Report\nMethod: ...\nOutcome: ...\nResult: p = ...\nConclusion:");
+      alert('Report template copied to clipboard!');
+    });
+  })();
+</script>
+</body>
+</html>
