@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applied Statistics · Animal & Veterinary Sciences</title>
+    <style>
+        :root {
+            --bg: #f7f8fa;
+            --surface: #ffffff;
+            --text: #1a1f36;
+            --text-secondary: #4a4f65;
+            --text-tertiary: #6b7094;
+            --border: #e3e5ee;
+            --border-light: #eff0f5;
+            --primary: #3c4b6c;
+            --primary-hover: #2d3a56;
+            --primary-light: #f0f2f7;
+            --primary-soft: #e8ebf3;
+            --accent: #4f6d9c;
+            --accent-light: #eef2f7;
+            --success: #1b6d4a;
+            --success-bg: #eaf5ef;
+            --error: #b33a3a;
+            --error-bg: #fdf0f0;
+            --warning: #8a6d1b;
+            --warning-bg: #fdf8e8;
+            --radius-sm: 6px;
+            --radius: 10px;
+            --radius-lg: 14px;
+            --radius-xl: 20px;
+            --shadow-xs: 0 1px 2px rgba(0,0,0,0.03);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.03);
+            --shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.03);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.03);
+            --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-mono: 'SF Mono', 'Fira Code', 'JetBrains Mono', 'Cascadia Code', 'Consolas', monospace;
+            --transition: 160ms cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 15px;
+            letter-spacing: -0.01em;
+        }
+
+        .page {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem 4rem;
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0 1.5rem;
+            border-bottom: 1px solid var(--border-light);
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .nav-logo {
+            font-weight: 650;
+            font-size: 1.15rem;
+            color: var(--primary);
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .nav-links { display: flex; gap: 0.25rem; flex-wrap: wrap; }
+        .nav-link {
+            padding: 0.45rem 0.85rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all var(--transition);
+            text-decoration: none;
+            border: none;
+            background: transparent;
+        }
+        .nav-link:hover { background: var(--primary-light); color: var(--primary); }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 2.5rem 1rem 3rem;
+        }
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            color: var(--text);
+            line-height: 1.2;
+            margin-bottom: 0.8rem;
+        }
+        .hero .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 620px;
+            margin: 0 auto 1.8rem;
+            line-height: 1.5;
+        }
+        .pill-row { display: flex; justify-content: center; gap: 0.6rem; flex-wrap: wrap; }
+        .pill {
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 0.35rem 0.9rem;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 550;
+            letter-spacing: 0.01em;
+        }
+
+        /* Section */
+        .section {
+            background: var(--surface);
+            border-radius: var(--radius-xl);
+            padding: 2rem 2rem 2.2rem;
+            margin-bottom: 1.8rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 1.2rem;
+        }
+        .section-header h2 {
+            font-size: 1.3rem;
+            font-weight: 650;
+            color: var(--text);
+            letter-spacing: -0.02em;
+        }
+        .section-header .badge {
+            background: var(--primary-light);
+            color: var(--primary);
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 0.2rem 0.7rem;
+            border-radius: 100px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        /* Cards */
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 0.9rem; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.9rem; }
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.3rem;
+            transition: all var(--transition);
+            box-shadow: var(--shadow-xs);
+        }
+        .card:hover { border-color: #cdd2e0; box-shadow: var(--shadow-md); }
+        .card-tag {
+            display: inline-block;
+            font-size: 0.68rem;
+            font-weight: 650;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            padding: 0.18rem 0.6rem;
+            border-radius: 4px;
+            margin-bottom: 0.6rem;
+        }
+        .tag-compare { background: #e8edf8; color: #3b4f7a; }
+        .tag-regression { background: #e6f0ea; color: #1f5a3a; }
+        .tag-categorical { background: #fdf3e0; color: #7a5418; }
+        .tag-survival { background: #ece9f8; color: #4a3780; }
+        .tag-nonpar { background: #fae9f0; color: #7a2d52; }
+
+        .card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.3rem; color: var(--text); }
+        .card p { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.3rem; }
+        .card .code-block {
+            background: #f6f7fa;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            padding: 0.5rem 0.7rem;
+            font-family: var(--font-mono);
+            font-size: 0.78rem;
+            color: var(--primary);
+            margin-top: 0.6rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            line-height: 1.4;
+        }
+        .interpretation-box {
+            background: #f9fafb;
+            border-left: 3px solid var(--accent);
+            padding: 0.5rem 0.8rem;
+            margin-top: 0.5rem;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text);
+            cursor: pointer;
+            transition: all var(--transition);
+            letter-spacing: -0.01em;
+            box-shadow: var(--shadow-xs);
+            white-space: nowrap;
+        }
+        .btn:hover { background: #f9fafb; border-color: #c4cad6; box-shadow: var(--shadow-sm); }
+        .btn-primary { background: var(--primary); color: #fff; border-color: var(--primary); font-weight: 550; }
+        .btn-primary:hover { background: var(--primary-hover); border-color: var(--primary-hover); }
+        .btn-sm { padding: 0.35rem 0.75rem; font-size: 0.78rem; }
+
+        /* Flowchart */
+        .flowchart-wrap {
+            background: #fafbfc;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            overflow-x: auto;
+        }
+        .flowchart-node { cursor: pointer; transition: all 140ms ease; }
+        .flowchart-node:hover { filter: brightness(0.96); }
+        .flowchart-node.active-node { stroke: var(--primary); stroke-width: 2.6; }
+        .flowchart-hint {
+            margin-top: 0.8rem;
+            padding: 0.6rem 1rem;
+            background: var(--primary-light);
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 500;
+            min-height: 2.6rem;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Quiz */
+        .quiz-option {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 0.7rem 1rem;
+            margin: 0.3rem 0;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all var(--transition);
+            color: var(--text);
+        }
+        .quiz-option:hover { background: #f9fafc; border-color: #b8bfd0; }
+        .quiz-option.correct-choice { background: var(--success-bg); border-color: #a3d4b8; color: var(--success); }
+        .quiz-option.wrong-choice { background: var(--error-bg); border-color: #e8b4b4; color: var(--error); }
+        .feedback-correct { background: var(--success-bg); color: var(--success); padding: 0.5rem 0.9rem; border-radius: var(--radius-sm); font-size: 0.85rem; }
+        .feedback-wrong { background: var(--error-bg); color: var(--error); padding: 0.5rem 0.9rem; border-radius: var(--radius-sm); font-size: 0.85rem; }
+
+        /* Tables */
+        .mini-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.78rem;
+            margin: 0.4rem 0;
+            background: #fafbfc;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+        }
+        .mini-table th, .mini-table td { padding: 0.35rem 0.6rem; text-align: left; border-bottom: 1px solid var(--border-light); }
+        .mini-table th { background: #f2f3f7; font-weight: 600; color: var(--text-secondary); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em; }
+
+        /* Tabs */
+        .tabs { display: flex; gap: 0.3rem; flex-wrap: wrap; margin-bottom: 1.2rem; }
+        .tab {
+            padding: 0.4rem 0.9rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.82rem;
+            font-weight: 500;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text-secondary);
+            transition: all var(--transition);
+        }
+        .tab.active-tab { background: var(--primary); color: #fff; border-color: var(--primary); }
+        .tab:hover:not(.active-tab) { background: #f4f5f9; }
+
+        /* Canvas */
+        canvas {
+            border-radius: var(--radius);
+            background: #fafbfd;
+            border: 1px solid var(--border-light);
+            max-width: 100%;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            .page { padding: 1rem 0.8rem 2rem; }
+            .hero h1 { font-size: 1.9rem; }
+            .section { padding: 1.2rem; }
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+        }
+        details summary { cursor: pointer; font-weight: 600; }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-logo">📊 StatVet</div>
+        <div class="nav-links">
+            <button class="nav-link" onclick="document.getElementById('guide').scrollIntoView({behavior:'smooth'})">Guide</button>
+            <button class="nav-link" onclick="document.getElementById('flowchart').scrollIntoView({behavior:'smooth'})">Flowchart</button>
+            <button class="nav-link" onclick="document.getElementById('datasets').scrollIntoView({behavior:'smooth'})">Data</button>
+            <button class="nav-link" onclick="document.getElementById('rcode').scrollIntoView({behavior:'smooth'})">R Code</button>
+            <button class="nav-link" onclick="document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">Quiz</button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Applied Statistics<br>for Animal & Veterinary Sciences</h1>
+        <p class="subtitle">A practical guide inspired by <em>Statistics in Plain English</em> (Urdan). Learn to choose the right test, understand what the results actually mean, and apply them to real veterinary problems.</p>
+        <div class="pill-row">
+            <span class="pill">Comparing Groups</span>
+            <span class="pill">Regression</span>
+            <span class="pill">Categorical Data</span>
+            <span class="pill">Survival Analysis</span>
+            <span class="pill">Non‑parametric</span>
+        </div>
+    </section>
+
+    <!-- Key concepts from Urdan -->
+    <section class="section">
+        <div class="section-header"><h2>Key Ideas from Statistics in Plain English</h2></div>
+        <div class="grid-2">
+            <div class="card">
+                <h3>🔹 What is a p‑value?</h3>
+                <p>A p‑value is the probability of obtaining your observed result (or one more extreme) if the null hypothesis were true. A small p‑value (typically &lt; 0.05) suggests your data are unlikely under the null hypothesis, so you may reject it.</p>
+                <div class="interpretation-box">📌 <strong>In plain English:</strong> "If there really were no difference between groups, how likely is it I'd see a difference this big just by chance?"</div>
+            </div>
+            <div class="card">
+                <h3>🔹 Effect size matters</h3>
+                <p>Statistical significance (p &lt; 0.05) does not mean practical importance. Always ask: "How large is the difference?" Report means, confidence intervals, or Cohen's d — not just the p‑value.</p>
+                <div class="interpretation-box">📌 <strong>Example:</strong> "Angus cattle gained 0.21 kg/day more than Herefords (95% CI: 0.08–0.34, p = 0.003). This is a moderate effect (d = 0.62)."</div>
+            </div>
+            <div class="card">
+                <h3>🔹 Parametric vs non‑parametric</h3>
+                <p>Parametric tests (t‑test, ANOVA) assume your data follow a normal distribution. Non‑parametric tests (Mann‑Whitney, Kruskal‑Wallis) use ranks and make no distributional assumptions — use them when normality is violated or with ordinal data.</p>
+            </div>
+            <div class="card">
+                <h3>🔹 Type I & Type II errors</h3>
+                <p><strong>Type I error:</strong> Concluding there is an effect when there isn't one (false positive).<br><strong>Type II error:</strong> Missing a real effect (false negative). Larger sample sizes reduce Type II error risk.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Decision Guide -->
+    <section class="section" id="guide">
+        <div class="section-header"><h2>Statistical Decision Guide</h2><span class="badge">12 tests</span></div>
+        <div class="tabs" id="filterTabs">
+            <span class="tab active-tab" data-filter="all">All</span>
+            <span class="tab" data-filter="comparing">Comparing Groups</span>
+            <span class="tab" data-filter="regression">Regression</span>
+            <span class="tab" data-filter="categorical">Categorical</span>
+            <span class="tab" data-filter="survival">Survival</span>
+            <span class="tab" data-filter="nonpar">Non‑parametric</span>
+        </div>
+        <div class="grid-2" id="testCardsGrid"></div>
+    </section>
+
+    <!-- Interactive Flowchart -->
+    <section class="section" id="flowchart">
+        <div class="section-header"><h2>Interactive Decision Flowchart</h2><span class="badge">Click nodes</span></div>
+        <div class="flowchart-wrap">
+            <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;font-family:Inter,system-ui;">
+                <defs>
+                    <filter id="shad"><feDropShadow dx="0" dy="1.5" stdDeviation="2.5" flood-opacity="0.06"/></filter>
+                    <marker id="arr" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto"><path d="M0,0 L7,2.5 L0,5 Z" fill="#8b92a8"/></marker>
+                </defs>
+                <g filter="url(#shad)">
+                    <rect id="fn1" x="270" y="18" width="180" height="40" rx="20" class="flowchart-node" fill="#f4f6fb" stroke="#c5cde0" stroke-width="1.4"/>
+                    <text x="360" y="43" text-anchor="middle" font-size="12.5" font-weight="650" fill="#2d3a56" pointer-events="none">Comparing groups?</text>
+                    <line x1="360" y1="58" x2="360" y2="78" stroke="#8b92a8" stroke-width="1.8" marker-end="url(#arr)"/>
+
+                    <rect id="fn2" x="250" y="81" width="220" height="40" rx="20" class="flowchart-node" fill="#f7f9fc" stroke="#c5cde0" stroke-width="1.4"/>
+                    <text x="360" y="106" text-anchor="middle" font-size="12.5" font-weight="650" fill="#2d3a56" pointer-events="none">How many groups?</text>
+                    <line x1="280" y1="121" x2="160" y2="162" stroke="#8b92a8" stroke-width="1.8" marker-end="url(#arr)"/>
+                    <line x1="440" y1="121" x2="560" y2="162" stroke="#8b92a8" stroke-width="1.8" marker-end="url(#arr)"/>
+
+                    <rect id="fn3" x="35" y="165" width="230" height="40" rx="16" class="flowchart-node" fill="#ffffff" stroke="#bcc3d4" stroke-width="1.4"/>
+                    <text x="150" y="190" text-anchor="middle" font-size="11.5" font-weight="600" fill="#1a1f36">2 groups → t-test / Mann-Whitney</text>
+
+                    <rect id="fn4" x="495" y="165" width="230" height="40" rx="16" class="flowchart-node" fill="#ffffff" stroke="#bcc3d4" stroke-width="1.4"/>
+                    <text x="610" y="190" text-anchor="middle" font-size="11.5" font-weight="600" fill="#1a1f36">3+ groups → ANOVA / Kruskal</text>
+
+                    <line x1="360" y1="210" x2="360" y2="238" stroke="#8b92a8" stroke-width="1.8" marker-end="url(#arr)"/>
+                    <rect id="fn5" x="225" y="241" width="270" height="40" rx="20" class="flowchart-node" fill="#fdfaf3" stroke="#d5cfa0" stroke-width="1.4"/>
+                    <text x="360" y="266" text-anchor="middle" font-size="11.5" font-weight="650" fill="#5a4a18">Outcome: continuous / ordinal / binary?</text>
+
+                    <line x1="360" y1="281" x2="360" y2="306" stroke="#8b92a8" stroke-width="1.8" marker-end="url(#arr)"/>
+                    <rect id="fn6" x="195" y="309" width="330" height="40" rx="20" class="flowchart-node" fill="#eef4f0" stroke="#a3c4ae" stroke-width="1.4"/>
+                    <text x="360" y="334" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1b4a2e">Normal? Yes → parametric | No → non‑parametric</text>
+                </g>
+            </svg>
+            <div class="flowchart-hint" id="flowchartHint">💡 Click any node above to see decision guidance in plain English.</div>
+        </div>
+    </section>
+
+    <!-- Datasets -->
+    <section class="section" id="datasets">
+        <div class="section-header"><h2>Practice Datasets</h2><span class="badge">CSV downloads</span></div>
+        <div class="grid-2" id="datasetGrid"></div>
+    </section>
+
+    <!-- Charts -->
+    <section class="section">
+        <div class="section-header"><h2>Quick Chart Illustrations</h2></div>
+        <div style="display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;">
+            <canvas id="barCanvas" width="300" height="200"></canvas>
+            <canvas id="scatterCanvas" width="300" height="200"></canvas>
+            <canvas id="survivalCanvas" width="300" height="200"></canvas>
+        </div>
+    </section>
+
+    <!-- R Code Library -->
+    <section class="section" id="rcode">
+        <div class="section-header"><h2>R Code Library</h2></div>
+        <div class="grid-3" id="rCodeGrid"></div>
+    </section>
+
+    <!-- Quiz -->
+    <section class="section" id="quiz">
+        <div class="section-header"><h2>Auto-Graded Quiz</h2></div>
+        <div id="quizContainer"></div>
+        <div style="display:flex;gap:1rem;align-items:center;margin-top:1rem;flex-wrap:wrap;">
+            <span id="scorePill" style="font-weight:600;background:var(--primary-light);color:var(--primary);padding:0.3rem 0.9rem;border-radius:100px;font-size:0.85rem;"></span>
+            <button class="btn btn-sm" id="resetQuizBtn">Restart Quiz</button>
+        </div>
+    </section>
+
+    <!-- Assignments -->
+    <section class="section">
+        <div class="section-header"><h2>Practical Assignments</h2></div>
+        <div class="grid-2" id="assignmentGrid"></div>
+    </section>
+
+    <!-- Templates -->
+    <section class="section">
+        <div class="section-header"><h2>Report Templates</h2></div>
+        <div style="display:flex;gap:0.8rem;flex-wrap:wrap;">
+            <button class="btn" id="copyReportBtn">Copy Report Template</button>
+            <button class="btn" id="copyRBtn">Copy R Template</button>
+        </div>
+    </section>
+
+    <!-- Instructor -->
+    <section class="section">
+        <div class="section-header"><h2>Instructor Notes</h2></div>
+        <details>
+            <summary>Weekly plan & common difficulties</summary>
+            <div style="margin-top:0.8rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.6;">
+                <p><strong>Week 1:</strong> t-test – cattle weight gain. Focus: p‑value interpretation.</p>
+                <p><strong>Week 2:</strong> ANOVA – housing stress in hens. Focus: post‑hoc tests & effect sizes.</p>
+                <p><strong>Week 3:</strong> Kruskal‑Wallis – dog pain scores. Focus: when to use non‑parametric tests.</p>
+                <p><strong>Week 4:</strong> Chi‑square – breed & hip dysplasia. Focus: categorical data.</p>
+                <p><strong>Week 5:</strong> Regression – milk yield & BRD risk. Focus: interpreting coefficients.</p>
+                <p style="margin-top:0.5rem;"><strong>Tip:</strong> Use the flowchart repeatedly. Encourage students to write interpretations in plain English, not just report p‑values.</p>
+            </div>
+        </details>
+    </section>
+</div>
+
+<script>
+(function() {
+    const tests = [
+        { name:'Independent t-test', cat:'comparing', tag:'Comparing Groups', tagClass:'tag-compare',
+          ex:'Compare daily weight gain in Angus vs Hereford cattle', out:'Continuous (kg)',
+          assum:'Normality, independence, equal variance',
+          r:'t.test(weight_gain ~ breed, data=cattle, var.equal=TRUE)',
+          interp:'If p < 0.05, we conclude the mean weight gain differs between breeds. Report the mean difference and 95% CI: e.g., "Angus gained 0.21 kg/day more (95% CI 0.08-0.34, p=0.003)."' },
+        { name:'Paired t-test', cat:'comparing', tag:'Comparing Groups', tagClass:'tag-compare',
+          ex:'Pre/post heart rate in horses after treatment', out:'Continuous (bpm)',
+          assum:'Differences normally distributed',
+          r:'t.test(pre, post, paired=TRUE)',
+          interp:'Compares two measurements from the same subject. A significant result means the average change differs from zero.' },
+        { name:'One-way ANOVA', cat:'comparing', tag:'Comparing Groups', tagClass:'tag-compare',
+          ex:'Cortisol in hens across cage, free-range, aviary', out:'Continuous (μg/dL)',
+          assum:'Normality, homogeneity of variance',
+          r:'aov(cortisol ~ housing, data=hens)\nTukeyHSD(model)',
+          interp:'ANOVA tells you if at least one group differs. Use Tukey HSD post‑hoc to find which pairs differ. Report F(df1,df2)=value, p=value.' },
+        { name:'Repeated Measures ANOVA', cat:'comparing', tag:'Comparing Groups', tagClass:'tag-compare',
+          ex:'Dog pain scores measured at 3 time points', out:'Continuous (score)',
+          assum:'Sphericity',
+          r:'aov(pain ~ time + Error(id), data=dogs)',
+          interp:'Used when the same subjects are measured multiple times. Controls for between‑subject variability.' },
+        { name:'Mann-Whitney U', cat:'nonpar', tag:'Non‑parametric', tagClass:'tag-nonpar',
+          ex:'Lameness scores (ordinal) in two treatment groups', out:'Ordinal / Non-normal',
+          assum:'Independent observations',
+          r:'wilcox.test(score ~ group, data=lameness)',
+          interp:'The non‑parametric alternative to the independent t‑test. Compares median ranks, not means. Report U and p‑value.' },
+        { name:'Kruskal-Wallis', cat:'nonpar', tag:'Non‑parametric', tagClass:'tag-nonpar',
+          ex:'Pain scores (0-10) across 3 analgesic treatments', out:'Ordinal',
+          assum:'Independent groups',
+          r:'kruskal.test(pain ~ treatment, data=dogs)',
+          interp:'The non‑parametric alternative to one‑way ANOVA. A significant result means at least one group tends to have higher/lower scores.' },
+        { name:'Chi-square test', cat:'categorical', tag:'Categorical', tagClass:'tag-categorical',
+          ex:'Association between dog breed and hip dysplasia (Yes/No)', out:'Categorical',
+          assum:'Expected frequencies ≥ 5',
+          r:'chisq.test(table(breed, disease))',
+          interp:'Tests whether two categorical variables are associated. Report χ²(df, N) = value, p=value. Look at percentages to describe the pattern.' },
+        { name:"Fisher's Exact", cat:'categorical', tag:'Categorical', tagClass:'tag-categorical',
+          ex:'Small sample disease association (n < 20)', out:'Binary',
+          assum:'None (exact test)',
+          r:'fisher.test(table(treatment, outcome))',
+          interp:'Use instead of chi‑square when expected frequencies are small. Reports an exact p‑value.' },
+        { name:'Linear regression', cat:'regression', tag:'Regression', tagClass:'tag-regression',
+          ex:'Predict milk yield from feed intake and age', out:'Continuous (litres)',
+          assum:'Linearity, normality of residuals, homoscedasticity',
+          r:'lm(milk_yield ~ feed + age, data=cows)\nsummary(model)',
+          interp:'Each coefficient tells you the expected change in milk yield for a 1‑unit increase in the predictor, holding others constant. R² indicates proportion of variance explained.' },
+        { name:'Logistic regression', cat:'regression', tag:'Regression', tagClass:'tag-regression',
+          ex:'Predict bovine respiratory disease risk (Yes/No) from weight and temperature', out:'Binary (0/1)',
+          assum:'Linear relationship in log-odds',
+          r:'glm(brd ~ weight + temp, family=binomial, data=calves)\nsummary(model)',
+          interp:'Coefficients are in log‑odds. Exponentiate to get odds ratios: OR > 1 means increased odds of disease per unit increase in predictor.' },
+        { name:'Kaplan-Meier', cat:'survival', tag:'Survival', tagClass:'tag-survival',
+          ex:'Compare survival time of dogs under two cancer treatments', out:'Time-to-event',
+          assum:'Independent censoring',
+          r:'library(survival)\nfit <- survfit(Surv(time,status)~treatment)\nplot(fit)\nsurvdiff(Surv(time,status)~treatment)',
+          interp:'The survival curve shows the proportion surviving over time. The log‑rank test compares curves between groups.' },
+        { name:'Cox regression', cat:'survival', tag:'Survival', tagClass:'tag-survival',
+          ex:'Effect of treatment on survival adjusting for age', out:'Time-to-event',
+          assum:'Proportional hazards',
+          r:'coxph(Surv(time,status)~treatment+age, data=dogs)\nsummary(model)',
+          interp:'Hazard ratios (HR) > 1 indicate increased risk of the event. HR < 1 indicates a protective effect.' }
+    ];
+
+    function renderCards(filter='all') {
+        const grid = document.getElementById('testCardsGrid');
+        const items = filter==='all' ? tests : tests.filter(t=>t.cat===filter);
+        grid.innerHTML = items.map(t=>`
+            <div class="card">
+                <span class="card-tag ${t.tagClass}">${t.tag}</span>
+                <h3>${t.name}</h3>
+                <p><strong>Example:</strong> ${t.ex}</p>
+                <p><strong>Outcome:</strong> ${t.out} &nbsp;|&nbsp; <strong>Assumptions:</strong> ${t.assum}</p>
+                <div class="code-block">${t.r}</div>
+                <div class="interpretation-box">💡 <strong>How to interpret:</strong> ${t.interp}</div>
+            </div>`).join('');
+    }
+    renderCards();
+    document.getElementById('filterTabs').addEventListener('click',e=>{
+        if(e.target.classList.contains('tab')){
+            document.querySelectorAll('#filterTabs .tab').forEach(t=>t.classList.remove('active-tab'));
+            e.target.classList.add('active-tab');
+            renderCards(e.target.dataset.filter);
+        }
+    });
+
+    // Flowchart
+    const hints={
+        fn1:'Start: Are you comparing groups? If yes, continue down. If you are exploring relationships between continuous variables, consider regression.',
+        fn2:'Count your groups. Two groups → t-test or Mann-Whitney. Three or more groups → ANOVA or Kruskal-Wallis.',
+        fn3:'Two independent groups with a continuous outcome: use an independent t-test if data are approximately normal. If data are skewed or ordinal, use Mann-Whitney U.',
+        fn4:'Three or more groups: use one-way ANOVA if normal with equal variance. If assumptions are violated, use Kruskal-Wallis (the non‑parametric alternative).',
+        fn5:'Identify your outcome variable type. Continuous (weight, cortisol), ordinal (pain score 0-10), binary (disease yes/no), or time-to-event (survival).',
+        fn6:'Check normality (Shapiro-Wilk test, histogram, Q-Q plot). If normal → parametric tests are appropriate. If not → non‑parametric tests are safer and still valid.'
+    };
+    const hintDiv=document.getElementById('flowchartHint');
+    document.querySelectorAll('.flowchart-node').forEach(n=>{
+        n.addEventListener('click',()=>{
+            document.querySelectorAll('.flowchart-node').forEach(x=>x.classList.remove('active-node'));
+            n.classList.add('active-node');
+            hintDiv.innerHTML=`💡 <strong>${hints[n.id]||'Click a node for guidance.'}</strong>`;
+        });
+    });
+
+    // Datasets
+    const datasets=[
+        {name:'cattle_weight_gain.csv',desc:'Daily gain (kg) Angus vs Hereford',q:'Does breed affect weight gain?',test:'Independent t-test',csv:'breed,weight_gain\nAngus,1.45\nAngus,1.52\nHereford,1.32\nHereford,1.28\nAngus,1.61\nHereford,1.35\nAngus,1.48\nHereford,1.30'},
+        {name:'housing_stress.csv',desc:'Cortisol (μg/dL) in hens (cage/free-range/aviary)',q:'Does housing affect stress?',test:'One-way ANOVA',csv:'housing,cortisol\ncage,12.3\ncage,13.0\nfree_range,9.1\nfree_range,8.7\naviary,10.4\naviary,11.0\ncage,11.8\nfree_range,9.5'},
+        {name:'dog_pain_scores.csv',desc:'Pain scores (0-10) by analgesic treatment',q:'Do pain scores differ across treatments?',test:'Kruskal-Wallis',csv:'treatment,pain\nA,3\nA,4\nB,5\nB,6\nC,2\nC,3\nA,4\nB,5'},
+        {name:'breed_disease.csv',desc:'Dog breed & hip dysplasia (Yes/No)',q:'Is breed associated with hip dysplasia?',test:'Chi-square',csv:'breed,disease\nLabrador,Yes\nLabrador,Yes\nBeagle,No\nBeagle,Yes\nLabrador,No\nBeagle,No\nLabrador,Yes\nBeagle,No'},
+        {name:'milk_yield.csv',desc:'Milk yield (L), feed intake (kg), age (years)',q:'Predict milk yield from feed & age?',test:'Linear regression',csv:'milk_yield,feed,age\n28,15,4\n32,17,5\n25,13,3\n30,16,5\n27,14,4\n33,18,6'},
+        {name:'brd_risk.csv',desc:'BRD (0/1), weight (kg), temperature (°F)',q:'Predict BRD risk?',test:'Logistic regression',csv:'brd,weight,temp\n0,210,101.2\n1,185,103.1\n0,220,100.8\n1,170,102.5\n0,205,101.0'},
+        {name:'survival_dogs.csv',desc:'Survival (days), status, treatment',q:'Compare survival between treatments?',test:'Kaplan-Meier',csv:'time,status,treatment\n120,1,A\n95,0,A\n200,1,B\n150,1,B\n80,0,A\n180,1,B'}
+    ];
+    const dsGrid=document.getElementById('datasetGrid');
+    datasets.forEach(d=>{
+        const card=document.createElement('div'); card.className='card';
+        const headers=d.csv.split('\n')[0].split(',');
+        const rows=d.csv.split('\n').slice(1,4);
+        card.innerHTML=`
+            <strong>${d.name}</strong><p style="margin-top:0.2rem;">${d.desc}</p>
+            <p><strong>Q:</strong> ${d.q}</p><p><strong>Test:</strong> ${d.test}</p>
+            <table class="mini-table"><tr>${headers.map(h=>`<th>${h}</th>`).join('')}</tr>${rows.map(r=>`<tr>${r.split(',').map(c=>`<td>${c}</td>`).join('')}</tr>`).join('')}</table>`;
+        const btn=document.createElement('button'); btn.className='btn btn-sm'; btn.textContent='Download CSV'; btn.style.marginTop='0.4rem';
+        btn.addEventListener('click',e=>{e.stopPropagation();const b=new Blob([d.csv],{type:'text/csv'});const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download=d.name;a.click();URL.revokeObjectURL(u);});
+        card.appendChild(btn); dsGrid.appendChild(card);
+    });
+
+    // Charts
+    (function(){
+        const bc=document.getElementById('barCanvas'); if(bc){const ctx=bc.getContext('2d');ctx.fillStyle='#3c4b6c';ctx.fillRect(55,90,45,100);ctx.fillStyle='#8897b8';ctx.fillRect(145,60,45,130);ctx.fillStyle='#1a1f36';ctx.font='11px Inter';ctx.fillText('Angus',48,210);ctx.fillText('Hereford',135,210);ctx.fillText('Weight gain (kg)',85,35);}
+        const sc=document.getElementById('scatterCanvas'); if(sc){const ctx=sc.getContext('2d');[[70,140],[105,115],[145,90],[185,65],[225,45]].forEach(([x,y])=>{ctx.beginPath();ctx.arc(x,y,4,0,2*Math.PI);ctx.fillStyle='#3c4b6c';ctx.fill();});ctx.strokeStyle='#a0a8c0';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(50,155);ctx.lineTo(240,40);ctx.stroke();ctx.fillStyle='#1a1f36';ctx.fillText('Milk yield vs Feed',100,25);}
+        const suc=document.getElementById('survivalCanvas'); if(suc){const ctx=suc.getContext('2d');ctx.strokeStyle='#3c4b6c';ctx.lineWidth=2.5;ctx.beginPath();ctx.moveTo(40,165);ctx.lineTo(110,165);ctx.lineTo(110,125);ctx.lineTo(180,125);ctx.lineTo(180,80);ctx.lineTo(250,80);ctx.stroke();ctx.strokeStyle='#8897b8';ctx.beginPath();ctx.moveTo(40,165);ctx.lineTo(90,165);ctx.lineTo(90,115);ctx.lineTo(160,115);ctx.lineTo(160,60);ctx.lineTo(230,60);ctx.stroke();ctx.fillStyle='#1a1f36';ctx.fillText('Survival probability',85,25);ctx.fillText('Time →',210,175);}
+    })();
+
+    // R Code grid
+    const rSnippets=[
+        {tag:'Comparing Groups',cls:'tag-compare',title:'t-test',code:'t.test(weight_gain ~ breed, data=cattle, var.equal=TRUE)'},
+        {tag:'Comparing Groups',cls:'tag-compare',title:'ANOVA + Tukey',code:'model <- aov(cortisol ~ housing, data=hens)\nsummary(model)\nTukeyHSD(model)'},
+        {tag:'Non‑parametric',cls:'tag-nonpar',title:'Kruskal-Wallis',code:'kruskal.test(pain ~ treatment, data=dogs)'},
+        {tag:'Categorical',cls:'tag-categorical',title:'Chi-square',code:'chisq.test(table(breed, disease))'},
+        {tag:'Regression',cls:'tag-regression',title:'Linear regression',code:'lm(milk_yield ~ feed + age, data=cows)\nsummary(model)'},
+        {tag:'Regression',cls:'tag-regression',title:'Logistic regression',code:'glm(brd ~ weight + temp, family=binomial, data=calves)\nsummary(model)'},
+        {tag:'Survival',cls:'tag-survival',title:'Kaplan-Meier',code:'library(survival)\nfit <- survfit(Surv(time,status) ~ treatment)\nplot(fit)\nsurvdiff(Surv(time,status) ~ treatment)'}
+    ];
+    document.getElementById('rCodeGrid').innerHTML=rSnippets.map(s=>`<div class="card"><span class="card-tag ${s.cls}">${s.tag}</span><h3>${s.title}</h3><div class="code-block">${s.code}</div></div>`).join('');
+
+    // Quiz
+    const quizQ=[
+        {q:'Angus vs Hereford weight gain, normal data. Which test?',opts:['Independent t-test','Chi-square','Kaplan-Meier'],correct:0,exp:'Two independent groups, continuous normal outcome → independent t-test.'},
+        {q:'Pain scores (ordinal, 0-10) across 3 treatments, data skewed. Which test?',opts:['ANOVA','Kruskal-Wallis','t-test'],correct:1,exp:'Ordinal outcome, 3+ groups, non-normal → Kruskal-Wallis (non‑parametric ANOVA).'},
+        {q:'Testing association between dog breed and hip dysplasia (Yes/No).',opts:['Chi-square','Linear regression','t-test'],correct:0,exp:'Two categorical variables → chi-square test of association.'},
+        {q:'Predicting milk yield (continuous) from feed intake.',opts:['Logistic regression','Linear regression',"Fisher's Exact"],correct:1,exp:'Continuous outcome → linear regression.'},
+        {q:'Binary outcome: bovine respiratory disease (Yes/No).',opts:['Logistic regression','t-test','Kruskal-Wallis'],correct:0,exp:'Binary outcome → logistic regression.'},
+        {q:'Comparing survival time between two cancer treatments, with censored data.',opts:['Kaplan-Meier','ANOVA','Chi-square'],correct:0,exp:'Time-to-event data with censoring → Kaplan-Meier survival analysis.'},
+        {q:'Which assumption is critical for a t-test but NOT for Mann-Whitney U?',opts:['Normality','Independence','Equal variance'],correct:0,exp:'The t-test assumes normality. Mann-Whitney is non‑parametric and does not.'},
+        {q:'Pre‑treatment and post‑treatment heart rates measured on the same horses.',opts:['Paired t-test','Independent t-test','Chi-square'],correct:0,exp:'Same subjects measured twice → paired t-test.'},
+        {q:'Small sample (n=12), testing association between two binary variables.',opts:["Fisher's Exact",'Chi-square','t-test'],correct:0,exp:'Small sample with categorical data → Fisher\'s exact test is more appropriate.'},
+        {q:'After a significant ANOVA, which post‑hoc test controls for multiple comparisons?',opts:['Tukey HSD','Multiple t-tests','Kruskal-Wallis'],correct:0,exp:'Tukey HSD is designed for post‑hoc comparisons after ANOVA.'}
+    ];
+    let cur=0,score=0;
+    const quizDiv=document.getElementById('quizContainer'),scorePill=document.getElementById('scorePill');
+    function showQuiz(){
+        if(cur>=quizQ.length){quizDiv.innerHTML=`<div class="feedback-correct" style="font-size:0.95rem;">✅ Complete. Score: ${score}/${quizQ.length}</div>`;scorePill.textContent=`Final: ${score}/${quizQ.length}`;return;}
+        const q=quizQ[cur];
+        quizDiv.innerHTML=`<p style="font-weight:600;margin-bottom:0.5rem;">Q${cur+1}: ${q.q}</p>${q.opts.map((o,i)=>`<button class="quiz-option" data-i="${i}">${o}</button>`).join('')}`;
+        document.querySelectorAll('.quiz-option').forEach(b=>b.addEventListener('click',function(){
+            const sel=parseInt(this.dataset.i),ok=sel===q.correct;
+            if(ok)score++;
+            document.querySelectorAll('.quiz-option').forEach((b2,i)=>{b2.disabled=true;b2.classList.add(i===q.correct?'correct-choice':(i===sel&&!ok?'wrong-choice':''));});
+            const fb=document.createElement('div');fb.className=ok?'feedback-correct':'feedback-wrong';fb.textContent=`${ok?'✓':'✗'} ${q.exp}`;quizDiv.appendChild(fb);
+            cur++;scorePill.textContent=`Score: ${score}/${cur}`;setTimeout(showQuiz,1100);
+        }));
+    }
+    showQuiz();
+    document.getElementById('resetQuizBtn').addEventListener('click',()=>{cur=0;score=0;scorePill.textContent='';showQuiz();});
+
+    // Assignments
+    document.getElementById('assignmentGrid').innerHTML=[
+        {t:'Assignment 1: t-test',o:'Compare Angus vs Hereford weight gain using cattle_weight_gain.csv',s:'Download CSV → t.test() → report mean difference, 95% CI, p‑value, and Cohen\'s d.'},
+        {t:'Assignment 2: ANOVA',o:'Analyze cortisol across housing systems (housing_stress.csv)',s:'aov() → check normality & homogeneity → TukeyHSD → report which groups differ.'},
+        {t:'Assignment 3: Kruskal-Wallis',o:'Compare pain scores across 3 analgesics (dog_pain_scores.csv)',s:'kruskal.test() → report medians per group → explain why non‑parametric was chosen.'},
+        {t:'Assignment 4: Chi-square',o:'Test breed–hip dysplasia association (breed_disease.csv)',s:'Create contingency table → chisq.test() → report χ², p‑value, and percentage pattern.'},
+        {t:'Assignment 5: Regression',o:'Predict milk yield from feed & age (milk_yield.csv)',s:'lm() → check R², coefficients, residuals → write plain‑English interpretation.'}
+    ].map(a=>`<div class="card"><h3>${a.t}</h3><p>${a.o}</p><p style="color:var(--text-secondary);">${a.s}</p></div>`).join('');
+
+    // Templates
+    document.getElementById('copyReportBtn').addEventListener('click',()=>{
+        navigator.clipboard?.writeText(`## Statistical Report (Plain English)
+**Method:** [e.g., Independent t-test]
+**Research question:** [What did you want to find out?]
+**Result:** The mean [outcome] for [group A] was [M, SD] and for [group B] was [M, SD]. The difference was [mean difference], 95% CI [lower, upper], t(df)=[value], p=[value].
+**Effect size:** Cohen's d = [value] ([small/medium/large])
+**Conclusion:** [State whether the groups differ. If significant, describe the practical importance.]`).then(()=>alert('Report template copied!'));
+    });
+    document.getElementById('copyRBtn').addEventListener('click',()=>{
+        navigator.clipboard?.writeText(`# Load and explore data
+data <- read.csv("filename.csv")
+summary(data)
+boxplot(outcome ~ group, data=data, main="Group comparison")
+
+# Run statistical test
+result <- t.test(outcome ~ group, data=data, var.equal=TRUE)
+result
+
+# Check assumptions
+shapiro.test(data$outcome)  # normality
+library(car)
+leveneTest(outcome ~ group, data=data)  # equal variance`).then(()=>alert('R template copied!'));
+    });
+})();
+</script>
+</body>
+</html>

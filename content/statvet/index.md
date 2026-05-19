@@ -1,7 +1,7 @@
 ---
-title: "Statistics 301"
-subtitle: "BSc in Animal Science"
-excerpt: "Descriptive and Inferential Statistics"
+title: "StatVet"
+subtitle: "Statistical Decisions"
+excerpt: "Statistical Decisions Made Easy"
 weight: 5
 author: "Jigme Tenzin"
 draft: false
