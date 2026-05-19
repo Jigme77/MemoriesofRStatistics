@@ -118,11 +118,11 @@ enableEmoji = true
    #  title = "Get started using the Hugo Apéro theme"
    #  url = "/get-started/"
    #  weight = 2
-  [[menu.header]]
-    name = "Classes"
-    title = "Classes"
-    url = "/module/"
-    weight = 3
+  #[[menu.header]]
+   # name = "Classes"
+   # title = "Classes"
+   # url = "/module/"
+   # weight = 3
   [[menu.header]]
     name = "cv"
     title = "Curriculum Vitae"
@@ -132,7 +132,7 @@ enableEmoji = true
     name = "Talks"
     title = "Talks"
     url = "/talk/"
-    weight = 5
+    weight = 3
 [[menu.header]]
     name = “StatVet”
     title = “StatVet”
