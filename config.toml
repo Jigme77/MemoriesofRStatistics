@@ -113,40 +113,36 @@ enableEmoji = true
     title = "About Me"
     url = "/about/"
     weight = 1
- # [[menu.header]]
- # name = "Get started"
-   #  title = "Get started using the Hugo Apéro theme"
-   #  url = "/get-started/"
-   #  weight = 2
-  #[[menu.header]]
-   # name = "Classes"
-   # title = "Classes"
-   # url = "/module/"
-   # weight = 3
+ 
+  [[menu.header]]
+   	name = "Classes"
+   	title = "Classes"
+   	url = "/module/"
+   	weight = 3
   [[menu.header]]
     name = "cv"
     title = "Curriculum Vitae"
     url = "/cv/cv/index.html/"
     weight = 4
-  #[[menu.header]]
+  [[menu.header]]
     #name = "Talks"
     #title = "Talks"
     #url = "/talk/"
     #weight = 3
-[[menu.header]]
+  [[menu.header]]
     name = “StatVet”
     title = “StatVet”
     url = “/statvet/“
     weight =3
- [[menu.header]]
-  name = "Publications"
-  title = "Publications"
-  url = "/publications/"
-  weight = 6
- [[menu.header]]
-  name = "Books"
-  title = "Books that I am reading or in the reading list"
-  url = "/books/"
+  [[menu.header]]
+    name = "Publications"
+    title = "Publications"
+    url = "/publications/"
+    weight = 6
+  [[menu.header]]
+    name = "Books"
+    title = "Books that I am reading or in the reading list"
+    url = "/books/"
   weight = 6
 
   # Configure footer  
