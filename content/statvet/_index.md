@@ -1,7 +1,7 @@
 ---
-title: Which test do I use?
+title: StatVet
 description: |
-  Making statistical decisions easier.
+  StatVet
 author: "Jigme Tenzin"
 show_post_thumbnail: true
 show_author_byline: true
@@ -12,14 +12,15 @@ layout: list # list, list-sidebar
 
 # for list-sidebar layout
 sidebar: 
-  title: Statistical Tests
+  title: StatVet
   description: |
-    Which test do I use?
+    Statistical decision making, which test do I perform?
+    
     Check out the _index.md file in the /talk folder 
     to edit this content. 
   author: "Jigme Tenzin"
   text_link_label: Subscribe via RSS
-  text_link_url: /statvet/index.html
+  text_link_url: /talk/index.xml
   show_sidebar_adunit: false # show ad container
 
 # set up common front matter for all pages inside blog/
@@ -32,7 +33,7 @@ cascade:
   # for single-sidebar layout
   sidebar:
     text_link_label: View recent talks
-    text_link_url: /statvet/index.html
+    text_link_url: /talk/
     show_sidebar_adunit: false # show ad container
 ---
 
