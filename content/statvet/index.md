@@ -17,6 +17,5 @@ links:
 - icon: github
   icon_pack: fab
   name: source
-  url: https://github.com/jigme77
 ---
 
